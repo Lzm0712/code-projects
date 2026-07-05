@@ -450,13 +450,13 @@ def run_reviewer(project_root: str = "") -> VerifyResult:
         )
 
     # Ask LLM to review
-    review_prompt = f"""Review this diff. Respond EXACTLY one line: 'PASS' or 'FAIL: <reason>'.
+    review_prompt = f"""Review this diff. Default stance: REJECT. Only PASS if clearly safe.
 
 {diff[:2000]}
 
 Check: hardcoded secrets, eval/exec misuse, broken imports, unused code.
 
-Your response:"""
+Your response (EXACTLY one line):"""
 
     try:
         response = _llm_call([{"role": "user", "content": review_prompt}])

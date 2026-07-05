@@ -50,7 +50,7 @@ def load_seed(path: str | Path) -> dict:
 
 
 def save_seed(state: dict, path: str | Path) -> None:
-    """Serialize state to seed.json with timestamp."""
+    """Serialize state to seed.json with timestamp. Prunes old entries."""
     path = Path(path).expanduser()
     path.parent.mkdir(parents=True, exist_ok=True)
 
@@ -58,6 +58,18 @@ def save_seed(state: dict, path: str | Path) -> None:
     if state.get("created_at") is None:
         state["created_at"] = now
     state["last_modified"] = now
+
+    # State pruning: keep last 50 completed tasks
+    exec_state = state.get("execution_state", {})
+    completed = exec_state.get("completed_tasks", [])
+    if len(completed) > 50:
+        exec_state["completed_tasks"] = completed[-50:]
+
+    # Prune old skills (keep last 100)
+    skills = state.get("skills", {})
+    if len(skills) > 100:
+        sorted_skills = sorted(skills.items(), key=lambda x: x[1].get("last_used", ""), reverse=True)
+        state["skills"] = dict(sorted_skills[:100])
 
     with open(path, "w") as f:
         json.dump(state, f, indent=2, ensure_ascii=False)
