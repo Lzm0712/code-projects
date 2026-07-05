@@ -107,10 +107,18 @@ def _discover_gaps(state: dict, context: dict) -> list[str]:
         if "def goal" not in content:
             gaps.append("Missing /goal pattern")
 
-    # Check tests
+    # Check tests vs source modules
     tests_dir = Path(__file__).parent.parent / "tests"
-    if not tests_dir.exists() or not list(tests_dir.glob("test_*.py")):
-        gaps.append("Missing or empty tests directory")
+    source_dir = Path(__file__).parent
+    if tests_dir.exists():
+        for src in sorted(source_dir.glob("*.py")):
+            if src.name.startswith("_"):
+                continue
+            test_file = tests_dir / f"test_{src.name}"
+            if not test_file.exists():
+                gaps.append(f"Missing test: tests/test_{src.name}")
+    else:
+        gaps.append("Missing tests directory")
 
     # Check skill changes suggest action
     if context.get("skill_changes", {}).get("new"):
