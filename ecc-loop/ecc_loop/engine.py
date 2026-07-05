@@ -128,15 +128,8 @@ def _discover_gaps(state: dict, context: dict) -> list[str]:
 
 
 def _extract_goals(goal: str) -> list[str]:
-    """Split goal into sub-goals. Double-newline separates, single newline stays.
-
-    Code blocks stay together as one task. Use blank lines to separate
-    multiple independent tasks.
-    """
-    if not goal:
-        return []
-    parts = [p.strip() for p in goal.split("\n\n") if p.strip()]
-    return parts or [goal.strip()]
+    """Return the goal as-is. Code blocks are atomic."""
+    return [goal.strip()] if goal.strip() else []
 
 
 # ── Stage 2: PLAN ────────────────────────────────────────────────────
@@ -293,6 +286,34 @@ def check_circuit_breaker(
     return cb
 
 
+def _run_with_breaker(state: dict, cfg, seed_path: str) -> tuple:
+    """Shared iteration loop: circuit breaker + seed sync. Returns (cb, should_stop)."""
+    state["total_attempts"] = state.get("total_attempts", 0) + 1
+    state["iteration"] = state.get("iteration", 0) + 1
+    cb = check_circuit_breaker(state, cfg)
+    if cb.tripped:
+        seed.save_seed(state, seed_path)
+        return cb, True
+    seed.save_seed(state, seed_path)
+    return cb, False
+
+
+def _update_fail_state(state: dict, error: str, seed_path: str) -> str:
+    """Update consecutive failure tracking. Returns feedback string."""
+    prev = state.get("last_error", "")
+    state["consecutive_failures"] = state.get("consecutive_failures", 0) + 1 if error == prev else 1
+    state["last_error"] = error
+    seed.save_seed(state, seed_path)
+    return f"[Iteration {state['iteration']}] {error}"
+
+
+def _succeed(state: dict, goal: str, seed_path: str) -> None:
+    """Mark goal complete, clear error state."""
+    state["last_error"] = ""
+    state["consecutive_failures"] = 0
+    seed.mark_complete(state, goal)
+    seed.save_seed(state, seed_path)
+
 # ── Single pass (one D→P→E→V iteration) ─────────────────────────────
 
 
@@ -346,22 +367,15 @@ def loop(
     feedback: Optional[str] = None
 
     while True:
-        # ── Circuit breaker before each iteration ──
-        state["total_attempts"] = state.get("total_attempts", 0) + 1
-        state["iteration"] = state.get("iteration", 0) + 1
-
-        cb = check_circuit_breaker(state, cfg)
-        if cb.tripped:
-            seed.save_seed(state, seed_path)
+        # ── Circuit breaker + seed sync (shared helper) ──
+        _, should_stop = _run_with_breaker(state, cfg, seed_path)
+        if should_stop:
             return VerifyResult(
                 status=VerifyStatus.FAIL,
-                passed_tasks=[],
-                failed_tasks=[],
-                summary=f"CIRCUIT BREAKER TRIPPED — {cb.trip_reason}",
-                feedback=cb.trip_reason,
+                passed_tasks=[], failed_tasks=[],
+                summary=f"CIRCUIT BREAKER TRIPPED — Max iterations ({cfg.max_iterations}) exceeded",
+                feedback=f"Max iterations ({cfg.max_iterations}) exceeded",
             )
-
-        seed.save_seed(state, seed_path)
 
         # ── Run a single iteration ──
         result = run_one(goal, feedback=feedback, seed_path=seed_path)
@@ -371,29 +385,17 @@ def loop(
             if run_verifier_on_pass:
                 v_result = run_verifier()
                 if v_result.status != VerifyStatus.PASS:
-                    result = v_result  # Verifier failed — iterate
+                    result = v_result
                 else:
-                    state["last_error"] = ""
-                    state["consecutive_failures"] = 0
-                    seed.mark_complete(state, goal)
-                    seed.save_seed(state, seed_path)
+                    _succeed(state, goal, seed_path)
                     return result
             else:
-                state["last_error"] = ""
-                state["consecutive_failures"] = 0
-                seed.mark_complete(state, goal)
-                seed.save_seed(state, seed_path)
+                _succeed(state, goal, seed_path)
                 return result
 
-        # FAIL: update error tracking, prepare feedback for re-entry
+        # FAIL: update error tracking (shared helper)
         error = result.feedback
-        prev_error = state.get("last_error", "")
-        if error == prev_error:
-            state["consecutive_failures"] = state.get("consecutive_failures", 0) + 1
-        else:
-            state["consecutive_failures"] = 1
-        state["last_error"] = error
-        seed.save_seed(state, seed_path)
+        _update_fail_state(state, error, seed_path)
 
         # Feed failure back into next DISCOVER
         feedback = f"[Iteration {state['iteration']}] {error}"
@@ -435,19 +437,14 @@ def goal(
     feedback: Optional[str] = None
 
     while True:
-        state["total_attempts"] = state.get("total_attempts", 0) + 1
-        state["iteration"] = state.get("iteration", 0) + 1
-
-        cb = check_circuit_breaker(state, cfg)
-        if cb.tripped:
-            seed.save_seed(state, seed_path)
+        # ── Circuit breaker + seed sync (shared helper) ──
+        _, should_stop = _run_with_breaker(state, cfg, seed_path)
+        if should_stop:
             return VerifyResult(
                 status=VerifyStatus.FAIL, passed_tasks=[], failed_tasks=[],
-                summary=f"CIRCUIT BREAKER TRIPPED — {cb.trip_reason}",
-                feedback=cb.trip_reason,
+                summary=f"CIRCUIT BREAKER TRIPPED — Max iterations ({cfg.max_iterations}) exceeded",
+                feedback=f"Max iterations ({cfg.max_iterations}) exceeded",
             )
-
-        seed.save_seed(state, seed_path)
 
         # Run one iteration
         result = run_one(task, feedback=feedback, seed_path=seed_path)
@@ -460,10 +457,7 @@ def goal(
                     text=True, timeout=30, cwd=Path(__file__).parent.parent,
                 )
                 if proc.returncode == 0:
-                    state["last_error"] = ""
-                    state["consecutive_failures"] = 0
-                    seed.mark_complete(state, task)
-                    seed.save_seed(state, seed_path)
+                    _succeed(state, task, seed_path)
                     return VerifyResult(
                         status=VerifyStatus.PASS,
                         passed_tasks=["goal"],
@@ -485,15 +479,9 @@ def goal(
                     feedback=str(e),
                 )
 
-        # FAIL: update error tracking, prepare feedback for re-entry
+        # FAIL: update error tracking (shared helper)
         error = result.feedback
-        prev_error = state.get("last_error", "")
-        if error == prev_error:
-            state["consecutive_failures"] = state.get("consecutive_failures", 0) + 1
-        else:
-            state["consecutive_failures"] = 1
-        state["last_error"] = error
-        seed.save_seed(state, seed_path)
+        _update_fail_state(state, error, seed_path)
         feedback = f"[Iteration {state['iteration']}] {error}"
 
 
