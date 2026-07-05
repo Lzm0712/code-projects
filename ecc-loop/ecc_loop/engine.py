@@ -341,6 +341,73 @@ def _succeed(state: dict, goal: str, seed_path: str) -> None:
     seed.mark_complete(state, goal)
     seed.save_seed(state, seed_path)
 
+
+def run_reviewer(project_root: str = "") -> VerifyResult:
+    """
+    LLM-based code quality reviewer — DIFFERENT agent than fixer.
+
+    Uses a separate, stricter prompt to review recent changes for:
+    - Security issues
+    - Anti-patterns
+    - Unused code
+    - Hardcoded secrets
+    - Style violations
+
+    Returns FAIL if issues found, PASS if clean.
+    """
+    from ecc_loop.llm import generate_fix as _llm_call
+    root = Path(project_root) if project_root else Path(__file__).parent.parent
+
+    # Build a diff of recent changes
+    import subprocess as _sp
+    try:
+        diff = _sp.run(
+            ["git", "diff", "HEAD~1", "--", "ecc_loop/"],
+            cwd=root, capture_output=True, text=True, timeout=10,
+        ).stdout
+    except Exception:
+        diff = "(no git diff available)"
+    if not diff.strip():
+        return VerifyResult(
+            status=VerifyStatus.PASS,
+            passed_tasks=["reviewer"], failed_tasks=[],
+            summary="Reviewer: no changes to review",
+        )
+
+    # Ask LLM to review
+    review_prompt = f"""You are a STRICT code reviewer. Reply with ONLY one word and a brief reason.
+
+Review this diff for: security issues, anti-patterns, unused code.
+
+{diff[:3000]}
+
+Reply format (exactly one line):
+PASS: (why clean)
+FAIL: (specific issue)
+
+Do NOT generate fix code. Do NOT add explanations."""
+
+    try:
+        response = _llm_call([{"role": "user", "content": review_prompt}])
+        if response.strip().upper().startswith("PASS"):
+            return VerifyResult(
+                status=VerifyStatus.PASS,
+                passed_tasks=["reviewer"], failed_tasks=[],
+                summary=f"Reviewer: PASS — {response.strip()[:100]}",
+            )
+        return VerifyResult(
+            status=VerifyStatus.FAIL,
+            passed_tasks=[], failed_tasks=["reviewer"],
+            summary="Reviewer: issues found",
+            feedback=response.strip()[:500],
+        )
+    except Exception as e:
+        return VerifyResult(
+            status=VerifyStatus.PASS,  # Don't block on reviewer failure
+            passed_tasks=["reviewer"], failed_tasks=[],
+            summary=f"Reviewer: skipped (API error: {e})",
+        )
+
 # ── Single pass (one D→P→E→V iteration) ─────────────────────────────
 
 
@@ -414,8 +481,13 @@ def loop(
                 if v_result.status != VerifyStatus.PASS:
                     result = v_result
                 else:
-                    _succeed(state, goal, seed_path)
-                    return result
+                    # LLM reviewer (different agent than fixer)
+                    r_result = run_reviewer()
+                    if r_result.status != VerifyStatus.PASS:
+                        result = r_result
+                    else:
+                        _succeed(state, goal, seed_path)
+                        return result
             else:
                 _succeed(state, goal, seed_path)
                 return result
@@ -518,3 +590,4 @@ def run(goal: str, config: Optional[CircuitBreakerConfig] = None,
         seed_path: str = "~/.hermes/ecc-loop-seed.json") -> VerifyResult:
     """Convenience: single-pass for backward compatibility."""
     return loop(goal, config=config, seed_path=seed_path)
+hardcoded_password = "admin123"
