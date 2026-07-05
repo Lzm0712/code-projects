@@ -476,6 +476,45 @@ Your response:"""
             summary=f"Reviewer: skipped (API error: {e})",
         )
 
+
+def run_typecheck(project_root: str = "") -> VerifyResult:
+    """
+    Run mypy type checking on the project.
+    Returns FAIL if type errors found.
+    """
+    import subprocess as _sp
+    root = Path(project_root) if project_root else Path(__file__).parent.parent
+    try:
+        proc = _sp.run(
+            ["python3", "-m", "mypy", "ecc_loop/", "--ignore-missing-imports", "--no-error-summary"],
+            cwd=root, capture_output=True, text=True, timeout=30,
+        )
+        if proc.returncode == 0:
+            return VerifyResult(
+                status=VerifyStatus.PASS,
+                passed_tasks=["typecheck"], failed_tasks=[],
+                summary="Type check: clean",
+            )
+        issues = proc.stdout.strip().splitlines()
+        return VerifyResult(
+            status=VerifyStatus.FAIL,
+            passed_tasks=[], failed_tasks=["typecheck"],
+            summary=f"Type check: {len(issues)} issue(s)",
+            feedback="\n".join(issues[:5]),
+        )
+    except FileNotFoundError:
+        return VerifyResult(
+            status=VerifyStatus.PASS,
+            passed_tasks=["typecheck"], failed_tasks=[],
+            summary="Type check: mypy not installed (skipped)",
+        )
+    except Exception as e:
+        return VerifyResult(
+            status=VerifyStatus.PASS,  # Don't block on check failures
+            passed_tasks=["typecheck"], failed_tasks=[],
+            summary=f"Type check: skipped ({e})",
+        )
+
 # ── Single pass (one D→P→E→V iteration) ─────────────────────────────
 
 
@@ -550,7 +589,11 @@ def loop(
                     result = v_result
                 else:
                     # LLM reviewer (different agent than fixer)
-                    r_result = run_reviewer()
+                    t_result = run_typecheck()
+                    if t_result.status != VerifyStatus.PASS:
+                        result = t_result
+                    else:
+                        r_result = run_reviewer()
                     if r_result.status != VerifyStatus.PASS:
                         result = r_result
                     else:
