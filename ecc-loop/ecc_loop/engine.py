@@ -69,11 +69,15 @@ def discover(goal: str, seed_path: str = "~/.hermes/ecc-loop-seed.json",
 
 
 def _extract_goals(goal: str) -> list[str]:
+    """Split goal into sub-goals. Double-newline separates, single newline stays.
+
+    Code blocks stay together as one task. Use blank lines to separate
+    multiple independent tasks.
+    """
     if not goal:
         return []
-    parts = goal.split("\n")
-    goals = [p.strip() for p in parts if p.strip() and not p.startswith("-")]
-    return goals or [goal.strip()]
+    parts = [p.strip() for p in goal.split("\n\n") if p.strip()]
+    return parts or [goal.strip()]
 
 
 # ── Stage 2: PLAN ────────────────────────────────────────────────────
