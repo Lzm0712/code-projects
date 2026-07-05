@@ -1,24 +1,53 @@
-# ECC Loop — Evolutionary Consciousness Code Loop
+# ECC Loop
 
-Hermes Agent 自改进循环。通过研究外部框架（如 JiuwenSwarm），提炼可落地的设计模式，持续优化 Hermes 的自进化能力。
+**Evolutionary Consciousness Code Loop** — Hermes Agent 自改进引擎。
+
+五阶段闭环：DISCOVER → PLAN → EXECUTE → VERIFY → ITERATE
+对标 [loop-engineering](https://github.com/cobusgreyling/loop-engineering) 框架。
+
+## 快速开始
+
+```bash
+cd ~/projects/ecc-loop
+uv run ecc status         # 查看当前状态
+uv run ecc run "goal"     # 单次执行
+uv run ecc loop "goal"    # 完整闭环（FAIL 自动迭代直到 PASS 或熔断）
+```
 
 ## 架构
 
 ```
-ecc-loop/
-├── ecc_loop/           # 核心模块
-│   ├── seed.py         # STATE.md ↔ seed.json 序列化
-│   ├── reflection.py   # 分层复盘（快/慢路径）
-│   └── scanner.py      # Skill 热更新扫描
-├── plans/              # 研究 & 实施计划
-├── research/           # 研究成果
-└── tests/              # 测试
+ecc_loop/
+├── models.py      # 数据结构 + CircuitBreaker
+├── engine.py      # 五阶段调度器 (run_one / loop)
+├── handlers.py    # Shell/Skill/Code 任务处理器
+├── seed.py        # 状态持久化 (seed.json)
+├── reflection.py  # Observations 分析引擎
+├── scanner.py     # Skill 变更检测
+└── cli.py         # 命令行入口
+
+LOOP.md            # 声明式循环配置
+STATE.md           # 人工可读项目状态
 ```
 
-## 三个改进方向
+## 五阶段
 
-| # | 改进 | 来源 | 状态 |
-|---|------|------|------|
-| A | build_context_seed 序列化 | JiuwenSwarm `to_seed()`/`from_seed()` | ✅ 完成 |
-| B | Skill 热更新机制 | JiuwenSwarm `update_evolution_config()` | ✅ 完成 |
-| C | 分层复盘 (FastOneShotPlanner) | JiuwenSwarm 贪心 vs BFS 规划 | ✅ 完成 |
+```
+DISCOVER ──→ PLAN ──→ EXECUTE ──→ VERIFY
+    ↑                               │
+    └─────────── FAIL ──────────────┘ (feedback 注入 DISCOVER)
+```
+
+| 阶段 | Karpathy 原则 | 做什么 |
+|------|--------------|--------|
+| DISCOVER | Think Before Coding | 收集上下文、暴露假设、接收反馈 |
+| PLAN | Simplicity First | 最小任务分解 |
+| EXECUTE | Surgical Changes | 只执行 PLAN 定义的任务 |
+| VERIFY | Goal-Driven | PASS → 交付，FAIL → 带反馈回 DISCOVER |
+
+## 测试
+
+```bash
+uv run pytest
+# 39 tests, 全部通过
+```
