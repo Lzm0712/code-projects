@@ -357,14 +357,21 @@ def run_reviewer(project_root: str = "") -> VerifyResult:
     """
     from ecc_loop.llm import generate_fix as _llm_call
     root = Path(project_root) if project_root else Path(__file__).parent.parent
-
-    # Build a diff of recent changes
     import subprocess as _sp
+
+    # Build a diff of UNCOMMITTED changes (not last commit)
     try:
+        # Staged + unstaged
         diff = _sp.run(
-            ["git", "diff", "HEAD~1", "--", "ecc_loop/"],
+            ["git", "diff", "HEAD", "--", "ecc_loop/"],
             cwd=root, capture_output=True, text=True, timeout=10,
         ).stdout
+        if not diff.strip():
+            # Also check staged but uncommitted
+            diff = _sp.run(
+                ["git", "diff", "--cached", "--", "ecc_loop/"],
+                cwd=root, capture_output=True, text=True, timeout=10,
+            ).stdout
     except Exception:
         diff = "(no git diff available)"
     if not diff.strip():
