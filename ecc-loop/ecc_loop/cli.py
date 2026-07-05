@@ -133,6 +133,47 @@ def cmd_fix() -> int:
     return 0
 
 
+def cmd_evolve() -> int:
+    """Continuous self-evolution: fix gaps in a loop until healthy."""
+    from ecc_loop.engine import _discover_gaps
+    import subprocess, sys
+
+    max_iterations = 10
+    for iteration in range(1, max_iterations + 1):
+        gaps = _discover_gaps({}, {})
+        if not gaps:
+            print(f"✅ Evolution complete after {iteration} iteration(s). ECC is healthy.")
+            return 0
+
+        print(f"\n── Iteration {iteration}/{max_iterations} ──")
+        print(f"   Gaps: {', '.join(gaps)}")
+
+        # Run ecc fix as subprocess for isolation
+        proc = subprocess.run(
+            [sys.executable, "-m", "ecc_loop.cli", "fix"],
+            capture_output=True, text=True, timeout=300,
+            cwd=str(Path(__file__).parent.parent),
+        )
+        if proc.returncode != 0:
+            print(f"   ❌ Fix failed: {proc.stderr[-300:]}")
+            return 1
+
+        # Verify: run core tests
+        proc = subprocess.run(
+            [sys.executable, "-m", "pytest", "-q",
+             "tests/test_seed.py", "tests/test_models.py", "tests/test_engine.py"],
+            capture_output=True, text=True, timeout=60,
+            cwd=str(Path(__file__).parent.parent),
+        )
+        if proc.returncode != 0:
+            print(f"   ❌ Tests failed after fix:\n{proc.stderr[-200:]}")
+            return 1
+        print(f"   ✅ Tests pass, continuing...")
+
+    print(f"⚠️  Circuit breaker: {max_iterations} iterations reached")
+    return 1
+
+
 def cmd_improve() -> int:
     """ECC self-assessment: uses DISCOVER's gap analysis."""
     from ecc_loop.engine import _discover_gaps
@@ -208,6 +249,9 @@ def main() -> int:
 
     if cmd == "fix":
         return cmd_fix()
+
+    if cmd == "evolve":
+        return cmd_evolve()
 
     print(f"Unknown command: {cmd}")
     return 1
