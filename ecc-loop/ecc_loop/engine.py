@@ -622,6 +622,7 @@ def loop(
         # FAIL: update error tracking (shared helper)
         error = result.feedback
         _update_fail_state(state, error, seed_path)
+        from ecc_loop.learning import record; record("cycle", 0, {"goal": goal[:50], "error": error[:100]})
 
         # Feed failure back into next DISCOVER
         feedback = f"[Iteration {state['iteration']}] {error}"

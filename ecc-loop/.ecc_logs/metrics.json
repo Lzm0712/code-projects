@@ -1,0 +1,209 @@
+{
+  "history": [
+    {
+      "ts": "2026-07-05T15:30:55.833620",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:30:55.856921",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:30:55.881400",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:30:55.964442",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:30:56.272282",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:30:56.309883",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:30:56.345039",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:30:56.380007",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:30:56.418068",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:30:56.459121",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\nmarker = Path('/var/folde",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:31:26.063962",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:31:26.097105",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:31:26.131048",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:31:26.168435",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:31:26.542071",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:31:26.572935",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:31:26.606360",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:31:26.639039",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:31:26.671154",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:31:26.708403",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\nmarker = Path('/var/folde",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:31:26.750726",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:31:26.751656",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test",
+        "error": "fail"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:31:26.752393",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    }
+  ]
+}
