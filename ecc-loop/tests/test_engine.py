@@ -88,7 +88,7 @@ def test_loop_pass_first_try(monkeypatch):
     monkeypatch.setattr(s, "load_seed", lambda p: {"version": "1.0"})
     monkeypatch.setattr(eng, "_execute_task", lambda task: "done")
 
-    result = engine.loop("test goal", config=CircuitBreakerConfig())
+    result = engine.loop("test goal", config=CircuitBreakerConfig(), run_verifier_on_pass=False)
     assert result.status == VerifyStatus.PASS
 
 
@@ -101,7 +101,7 @@ def test_loop_circuit_breaker_always_fails(monkeypatch):
         lambda task: (_ for _ in ()).throw(RuntimeError("always fail")))
     config = CircuitBreakerConfig(max_iterations=3, max_consecutive_failures=2)
 
-    result = engine.loop("test goal", config=config)
+    result = engine.loop("test goal", config=config, run_verifier_on_pass=False)
     assert result.status == VerifyStatus.FAIL
     assert "CIRCUIT BREAKER TRIPPED" in result.summary
 
@@ -122,7 +122,7 @@ def test_loop_succeeds_after_retry(monkeypatch):
     monkeypatch.setattr(eng, "_execute_task", flaky_handler)
     config = CircuitBreakerConfig(max_iterations=5, max_consecutive_failures=3)
 
-    result = engine.loop("test goal", config=config)
+    result = engine.loop("test goal", config=config, run_verifier_on_pass=False)
     assert result.status == VerifyStatus.PASS
 
 
@@ -134,5 +134,5 @@ def test_loop_same_goal_resets(monkeypatch):
     monkeypatch.setattr(s, "load_seed", lambda p: {"version": "1.0"})
     monkeypatch.setattr(eng, "_execute_task", lambda task: "done")
 
-    result = engine.loop("same goal", config=CircuitBreakerConfig())
+    result = engine.loop("same goal", config=CircuitBreakerConfig(), run_verifier_on_pass=False)
     assert result.status == VerifyStatus.PASS

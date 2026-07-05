@@ -23,7 +23,7 @@ def test_real_flow_pass():
         __result__ = "ok"
         """).strip()
 
-        result = engine.loop(code, config=CircuitBreakerConfig(max_iterations=2))
+        result = engine.loop(code, config=CircuitBreakerConfig(max_iterations=2), run_verifier_on_pass=False)
         assert result.status == VerifyStatus.PASS, f"Expected PASS, got: {result.summary}"
         assert test_path.exists()
         assert test_path.read_text() == "ecc loop works"
@@ -34,8 +34,8 @@ def test_real_flow_fail():
     Full flow: Python code that raises → VERIFY says FAIL → circuit breaker trips.
     """
     code = "__result__ = 1/0"
-    config = CircuitBreakerConfig(max_iterations=2, max_consecutive_failures=2)
-    result = engine.loop(code, config=config)
+    config = CircuitBreakerConfig(max_iterations=5, max_consecutive_failures=5)
+    result = engine.loop(code, config=config, run_verifier_on_pass=False)
     assert result.status == VerifyStatus.FAIL
     assert "CIRCUIT BREAKER" in result.summary
 
@@ -61,7 +61,7 @@ def test_real_loop_succeeds_after_retry():
         __result__ = f"retry succeeded on attempt {{count}}"
         """).strip()
 
-        result = engine.loop(code, config=CircuitBreakerConfig(max_iterations=5))
+        result = engine.loop(code, config=CircuitBreakerConfig(max_iterations=5), run_verifier_on_pass=False)
         assert result.status == VerifyStatus.PASS, f"Expected PASS, got: {result.summary}"
         assert retry_marker.exists()
 

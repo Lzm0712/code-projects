@@ -121,6 +121,7 @@ def _execute_task(task: Task) -> str:
 # ── Stage 4: VERIFY ─────────────────────────────────────────────────
 
 def verify(plan: Plan, execution: ExecutionResult) -> VerifyResult:
+    """Internal check: did tasks complete without error?"""
     passed, failed = [], []
     for task, result in zip(plan.tasks, execution.results):
         (passed if result.status == TaskStatus.PASS else failed).append(task.name)
@@ -140,6 +141,56 @@ def verify(plan: Plan, execution: ExecutionResult) -> VerifyResult:
         failed_tasks=[],
         summary=f"All {len(passed)} task(s) passed. Ready to ship.",
         feedback="",
+    )
+
+
+# ── Independent Verifier ─────────────────────────────────────────────
+
+import subprocess as _subprocess
+
+
+def run_verifier(project_root: str = "") -> VerifyResult:
+    """
+    Independent verification — external to EXECUTE.
+
+    Runs the project's core test suite file-by-file. Only if ALL pass
+    is the loop considered truly successful.
+    """
+    root = Path(project_root) if project_root else Path(__file__).parent.parent
+    core_tests = [
+        "tests/test_seed.py", "tests/test_models.py",
+        "tests/test_scanner.py", "tests/test_engine.py",
+        "tests/test_circuit_breaker.py",
+    ]
+
+    for test_file in core_tests:
+        try:
+            proc = _subprocess.run(
+                ["python3", "-m", "pytest", "-q", test_file],
+                cwd=root, capture_output=True, text=True, timeout=15,
+            )
+            if proc.returncode != 0:
+                return VerifyResult(
+                    status=VerifyStatus.FAIL,
+                    passed_tasks=[],
+                    failed_tasks=["verifier"],
+                    summary=f"Verifier: {test_file} FAILED",
+                    feedback=f"{test_file}:\n{proc.stderr[:200]}\n{proc.stdout[:200]}",
+                )
+        except Exception as e:
+            return VerifyResult(
+                status=VerifyStatus.FAIL,
+                passed_tasks=[],
+                failed_tasks=["verifier"],
+                summary=f"Verifier: {test_file} error — {e}",
+                feedback=str(e),
+            )
+
+    return VerifyResult(
+        status=VerifyStatus.PASS,
+        passed_tasks=["verifier"],
+        failed_tasks=[],
+        summary=f"Verifier: {len(core_tests)} test files passed",
     )
 
 
@@ -193,6 +244,7 @@ def loop(
     goal: str,
     config: Optional[CircuitBreakerConfig] = None,
     seed_path: str = "~/.hermes/ecc-loop-seed.json",
+    run_verifier_on_pass: bool = True,
 ) -> VerifyResult:
     """
     Task-driven closed loop:
@@ -239,12 +291,23 @@ def loop(
         result = run_one(goal, feedback=feedback, seed_path=seed_path)
 
         if result.status == VerifyStatus.PASS:
-            # Success: clear error state, mark complete
-            state["last_error"] = ""
-            state["consecutive_failures"] = 0
-            seed.mark_complete(state, goal)
-            seed.save_seed(state, seed_path)
-            return result
+            # ── Independent verifier (referee, not player) ──
+            if run_verifier_on_pass:
+                v_result = run_verifier()
+                if v_result.status != VerifyStatus.PASS:
+                    result = v_result  # Verifier failed — iterate
+                else:
+                    state["last_error"] = ""
+                    state["consecutive_failures"] = 0
+                    seed.mark_complete(state, goal)
+                    seed.save_seed(state, seed_path)
+                    return result
+            else:
+                state["last_error"] = ""
+                state["consecutive_failures"] = 0
+                seed.mark_complete(state, goal)
+                seed.save_seed(state, seed_path)
+                return result
 
         # FAIL: update error tracking, prepare feedback for re-entry
         error = result.feedback

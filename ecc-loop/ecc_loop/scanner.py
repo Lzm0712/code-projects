@@ -81,3 +81,11 @@ def report_changes(skills_dir: Optional[str] = None) -> str:
     if not parts:
         return "✅ No skill changes detected."
     return "\n".join(parts)
+
+# ECC self-evolution marker
+
+# ECC self-evolution marker
+
+# ECC self-evolution marker
+
+# ECC self-evolution marker

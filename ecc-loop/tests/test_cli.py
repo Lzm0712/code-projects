@@ -2,6 +2,7 @@
 
 import pytest
 from ecc_loop import cli
+from ecc_loop.models import VerifyStatus, VerifyResult
 
 
 def test_cmd_run_pass(monkeypatch):
@@ -44,6 +45,10 @@ def test_cmd_loop_pass(monkeypatch):
 
     monkeypatch.setattr(s, "load_seed", lambda p: {"version": "1.0"})
     monkeypatch.setattr(eng, "_execute_task", stub_pass)
+    monkeypatch.setattr(eng, "run_verifier",
+        lambda **kw: VerifyResult(
+            status=VerifyStatus.PASS, passed_tasks=["v"],
+            failed_tasks=[], summary="mock", feedback=""))
 
     rc = cli.cmd_loop("test loop goal")
     assert rc == 0
