@@ -125,6 +125,12 @@ class CircuitBreakerConfig:
     max_consecutive_failures: int = 3  # Same error N times in a row → trip
     stagnant_attempts: int = 3        # No progress after N attempts → trip
 
+    def __post_init__(self):
+        if self.max_iterations < 1:
+            raise ValueError(f"max_iterations must be >= 1, got {self.max_iterations}")
+        if self.max_consecutive_failures < 1:
+            raise ValueError(f"max_consecutive_failures must be >= 1, got {self.max_consecutive_failures}")
+
 
 @dataclass
 class CircuitBreakerState:

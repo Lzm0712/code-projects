@@ -151,6 +151,12 @@ def _discover_gaps(state: dict, context: dict) -> list[str]:
     if not (source_dir / "py.typed").exists():
         gaps.append("Missing py.typed marker for type checking")
 
+    # Check CircuitBreakerConfig validation
+    models_src = source_dir / "models.py"
+    if models_src.exists():
+        if "__post_init__" not in models_src.read_text():
+            gaps.append("CircuitBreakerConfig missing __post_init__ validation (max_iterations=0 not rejected)")
+
     return gaps
 
 
