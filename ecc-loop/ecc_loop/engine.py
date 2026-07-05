@@ -22,6 +22,7 @@ from ecc_loop.models import (
     CircuitBreakerConfig, CircuitBreakerState,
 )
 from ecc_loop import seed, scanner, reflection
+from ecc_loop.logger import log as _log
 
 
 
@@ -579,6 +580,7 @@ def loop(
             )
 
         # ── Run a single iteration ──
+        _log("EXECUTE", goal, f"iter {state['iteration']}", state['iteration'])
         result = run_one(goal, feedback=feedback, seed_path=seed_path)
 
         if result.status == VerifyStatus.PASS:
@@ -588,18 +590,20 @@ def loop(
                 if v_result.status != VerifyStatus.PASS:
                     result = v_result
                 else:
-                    # LLM reviewer (different agent than fixer)
+                    # Type check + LLM reviewer
                     t_result = run_typecheck()
                     if t_result.status != VerifyStatus.PASS:
                         result = t_result
                     else:
                         r_result = run_reviewer()
-                    if r_result.status != VerifyStatus.PASS:
-                        result = r_result
-                    else:
-                        _succeed(state, goal, seed_path)
-                        return result
+                        if r_result.status != VerifyStatus.PASS:
+                            result = r_result
+                        else:
+                            _log("PASS", goal, "all checks", state['iteration'])
+                            _succeed(state, goal, seed_path)
+                            return result
             else:
+                _log("PASS", goal, "no verifier", state['iteration'])
                 _succeed(state, goal, seed_path)
                 return result
 
