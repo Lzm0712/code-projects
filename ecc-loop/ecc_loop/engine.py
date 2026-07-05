@@ -18,7 +18,7 @@ from ecc_loop.models import (
     DiscoveryResult, Plan, ExecutionResult, VerifyResult,
     Task, TaskStatus, VerifyStatus,
 )
-from ecc_loop import seed, scanner
+from ecc_loop import seed, scanner, reflection
 
 
 # ── Stage 1: DISCOVER ────────────────────────────────────────────────
@@ -32,19 +32,11 @@ def discover(goal: str, seed_path: str = "~/.hermes/ecc-loop-seed.json") -> Disc
     state = seed.load_seed(seed_path)
     context: dict = {}
 
-    # Gather context from observations
-    obs_path = Path.home() / ".hermes" / "observations.jsonl"
-    recent_obs: list[dict] = []
-    if obs_path.exists():
-        try:
-            with open(obs_path) as f:
-                lines = [l.strip() for l in f if l.strip()]
-                # Last 10 observations
-                for line in lines[-10:]:
-                    recent_obs.append(json.loads(line))
-        except (json.JSONDecodeError, OSError):
-            pass
-    context["recent_observations"] = len(recent_obs)
+    # Gather context via reflection analyzer
+    obs_info = reflection.analyze_observations()
+    context["observations_count"] = obs_info["count"]
+    context["recent_observations"] = obs_info["recent"]
+    context["patterns"] = obs_info.get("patterns", [])
     context["tracked_skills"] = len(state.get("skills", {}))
 
     # Scan skills for relevant context
@@ -59,9 +51,9 @@ def discover(goal: str, seed_path: str = "~/.hermes/ecc-loop-seed.json") -> Disc
 
     # Surface assumptions (Think Before Coding)
     assumptions = [
-        f"Goal is achievable via skill/code execution in this environment",
-        f"EXECUTE can invoke handlers: skill, shell, code",
-        f"Observations available at {obs_path}",
+        "Goal is achievable via skill/code execution in this environment",
+        "EXECUTE can invoke handlers: shell, skill, code",
+        "Observations available for context gathering",
     ]
 
     return DiscoveryResult(
@@ -141,11 +133,13 @@ def execute(plan: Plan) -> ExecutionResult:
 
 
 def _execute_task(task: Task) -> str:
+    """Execute a single task using the appropriate handler.
+
+    Raises on failure; caught by execute() → TaskStatus.FAIL.
     """
-    Execute a single task. Phase 2: replace with real handlers.
-    Currently a stub that returns task description.
-    """
-    return f"[stub] executed: {task.description}"
+    from ecc_loop.handlers import handler_for
+    h = handler_for(task)
+    return h(task)
 
 
 # ── Stage 4: VERIFY ─────────────────────────────────────────────────
