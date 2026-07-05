@@ -24,6 +24,7 @@ from ecc_loop.models import (
 from ecc_loop import seed, scanner, reflection
 from ecc_loop.logger import log as _log
 from ecc_loop.goal_freeze import freeze as _freeze, check as _check_frozen
+from ecc_loop.precise_specs import Specs
 
 
 
@@ -599,11 +600,18 @@ def loop(
                     if t_result.status != VerifyStatus.PASS:
                         result = t_result
                     else:
-                        r_result = run_reviewer()
-                        if r_result.status != VerifyStatus.PASS:
-                            result = r_result
+                        # Precise spec check (Best Practice #5)
+                        s_ok, s_results = Specs.TESTS_PASS.verify()
+                        if not s_ok:
+                            result = VerifyResult(
+                                status=VerifyStatus.FAIL, passed_tasks=[], failed_tasks=["spec"],
+                                summary="Spec check: FAILED", feedback=s_results[0])
                         else:
-                            _log("PASS", goal, "all checks", state['iteration'])
+                            r_result = run_reviewer()
+                            if r_result.status != VerifyStatus.PASS:
+                                result = r_result
+                            else:
+                                _log("PASS", goal, "all checks", state['iteration'])
                             _succeed(state, goal, seed_path)
                             return result
             else:
