@@ -176,8 +176,9 @@ def cmd_evolve() -> int:
 
 def cmd_improve() -> int:
     """ECC self-assessment: uses DISCOVER's gap analysis."""
-    from ecc_loop.engine import _discover_gaps
+    from ecc_loop.engine import _discover_gaps, discover_work
     gaps = _discover_gaps({}, {})
+    work = discover_work()
     checks = ["seed.py", "scanner.py", "engine.py", "handlers.py", "cli.py", "run_verifier", "def goal", "tests/", "LOOP.md"]
     implemented = [c for c in checks if not any(c in g for g in gaps)]
     missing = [c for c in checks if any(c in g for g in gaps)]
@@ -195,6 +196,10 @@ def cmd_improve() -> int:
         for g in gaps:
             print(f"  - {g}")
         print(f"\nNext: implement {missing[0] if missing else 'nothing — all clear'}")
+    if work:
+        print(f"\nExternal work signals:")
+        for w in work:
+            print(f"  📋 {w}")
     return 0
 
 def main() -> int:

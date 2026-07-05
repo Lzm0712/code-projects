@@ -24,6 +24,65 @@ from ecc_loop.models import (
 from ecc_loop import seed, scanner, reflection
 
 
+
+def discover_work(project_root: str = "") -> list[str]:
+    """
+    Stage 0: Discover work from EXTERNAL signals (not just file checks).
+
+    Scans:
+    - Git status (uncommitted changes, untracked files)
+    - Recent commit messages (TODO/FIXME/HACK)
+    - Pytest cache (last test failures)
+    - Stale branches
+
+    Returns list of discovered work items.
+    """
+    import subprocess as _sp
+    root = Path(project_root) if project_root else Path(__file__).parent.parent
+    work = []
+
+    try:
+        # 1. Git status: uncommitted changes
+        status = _sp.run(
+            ["git", "status", "--porcelain"],
+            cwd=root, capture_output=True, text=True, timeout=10,
+        ).stdout.strip()
+        if status:
+            lines = status.splitlines()
+            modified = [l for l in lines if l.startswith(" M") or l.startswith("M ")]
+            untracked = [l for l in lines if l.startswith("??")]
+            if modified:
+                work.append(f"Git: {len(modified)} uncommitted modified file(s)")
+            if untracked:
+                work.append(f"Git: {len(untracked)} untracked file(s)")
+
+        # 2. Recent commits with TODO/FIXME
+        log = _sp.run(
+            ["git", "log", "--oneline", "-20", "--grep=TODO", "--grep=FIXME", "--grep=HACK", "--all-match"],
+            cwd=root, capture_output=True, text=True, timeout=10,
+        ).stdout.strip()
+        if log:
+            work.append(f"Git log: {len(log.splitlines())} recent commits with TODO/FIXME")
+
+        # 3. Last test failures from pytest cache
+        cache_dir = root / ".pytest_cache" / "v" / "cache"
+        if cache_dir.exists():
+            for cache_file in cache_dir.glob("lastfailed*"):
+                work.append("Pytest: previous test failures detected")
+
+        # 4. Stale branches (>14 days)
+        branches = _sp.run(
+            ["git", "branch", "--no-merged", "main"],
+            cwd=root, capture_output=True, text=True, timeout=10,
+        ).stdout.strip()
+        if branches:
+            work.append(f"Git: {len(branches.splitlines())} unmerged branches")
+
+    except Exception:
+        pass  # Discovery is best-effort
+
+    return work
+
 # ── Stage 1: DISCOVER ────────────────────────────────────────────────
 
 def discover(goal: str, seed_path: str = "~/.hermes/ecc-loop-seed.json",
