@@ -1,0 +1,4 @@
+loguru>=0.7.3
+typer>=0.25.1
+plotext>=5.0.0
+pytest>=7.0.0
