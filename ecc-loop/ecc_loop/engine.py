@@ -153,8 +153,8 @@ def run_verifier(project_root: str = "") -> VerifyResult:
     """
     Independent verification — external to EXECUTE.
 
-    Runs the project's core test suite file-by-file. Only if ALL pass
-    is the loop considered truly successful.
+    Runs the project's core test suite with subprocess fallback.
+    Only if ALL pass is the loop considered truly successful.
     """
     root = Path(project_root) if project_root else Path(__file__).parent.parent
     core_tests = [
@@ -163,35 +163,52 @@ def run_verifier(project_root: str = "") -> VerifyResult:
         "tests/test_circuit_breaker.py",
     ]
 
-    for test_file in core_tests:
-        try:
-            proc = _subprocess.run(
-                ["python3", "-m", "pytest", "-q", test_file],
-                cwd=root, capture_output=True, text=True, timeout=15,
-            )
-            if proc.returncode != 0:
-                return VerifyResult(
-                    status=VerifyStatus.FAIL,
-                    passed_tasks=[],
-                    failed_tasks=["verifier"],
-                    summary=f"Verifier: {test_file} FAILED",
-                    feedback=f"{test_file}:\n{proc.stderr[:200]}\n{proc.stdout[:200]}",
-                )
-        except Exception as e:
+    try:
+        proc = _subprocess.run(
+            ["python3", "-m", "pytest", "-q", "-p", "no:xdist"] + core_tests,
+            cwd=root, capture_output=True, text=True, timeout=30,
+        )
+        if proc.returncode == 0:
             return VerifyResult(
-                status=VerifyStatus.FAIL,
-                passed_tasks=[],
-                failed_tasks=["verifier"],
-                summary=f"Verifier: {test_file} error — {e}",
-                feedback=str(e),
+                status=VerifyStatus.PASS,
+                passed_tasks=["verifier"],
+                failed_tasks=[],
+                summary=f"Verifier: all {len(core_tests)} files passed",
             )
-
-    return VerifyResult(
-        status=VerifyStatus.PASS,
-        passed_tasks=["verifier"],
-        failed_tasks=[],
-        summary=f"Verifier: {len(core_tests)} test files passed",
-    )
+        return VerifyResult(
+            status=VerifyStatus.FAIL,
+            passed_tasks=[],
+            failed_tasks=["verifier"],
+            summary="Verifier: tests FAILED",
+            feedback=f"{proc.stderr[:300]}\n{proc.stdout[:300]}",
+        )
+    except Exception as e:
+        # Fallback: one-by-one
+        for test_file in core_tests:
+            try:
+                proc = _subprocess.run(
+                    ["python3", "-m", "pytest", "-q", test_file],
+                    cwd=root, capture_output=True, text=True, timeout=15,
+                )
+                if proc.returncode != 0:
+                    return VerifyResult(
+                        status=VerifyStatus.FAIL,
+                        passed_tasks=[],
+                        failed_tasks=["verifier"],
+                        summary=f"Verifier: {test_file} FAILED",
+                        feedback=proc.stderr[:200],
+                    )
+            except Exception as e2:
+                return VerifyResult(
+                    status=VerifyStatus.FAIL, passed_tasks=[],
+                    failed_tasks=["verifier"],
+                    summary=f"Verifier error: {e2}", feedback=str(e2),
+                )
+        return VerifyResult(
+            status=VerifyStatus.PASS,
+            passed_tasks=["verifier"], failed_tasks=[],
+            summary=f"Verifier: {len(core_tests)} files passed (one-by-one)",
+        )
 
 
 # ── Circuit Breaker ─────────────────────────────────────────────────
