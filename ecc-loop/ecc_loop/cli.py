@@ -81,20 +81,12 @@ def cmd_status() -> int:
 
 
 def cmd_improve() -> int:
-    """ECC self-assessment: checks what's implemented vs LOOP.md."""
-    loop_md = Path(__file__).parent.parent / "LOOP.md"
-    checks = [
-        ("State file (seed.json)", Path("ecc_loop/seed.py").exists()),
-        ("Skill scanner", Path("ecc_loop/scanner.py").exists()),
-        ("Circuit breaker", "CircuitBreaker" in (Path("ecc_loop/engine.py").read_text())),
-        ("Independent verifier", "run_verifier" in (Path("ecc_loop/engine.py").read_text())),
-        ("Goal pattern", "def goal" in (Path("ecc_loop/engine.py").read_text())),
-        ("Handler auto-detect", "_SHELL_PREFIXES" in (Path("ecc_loop/handlers.py").read_text())),
-        ("LOOP.md config", loop_md.exists()),
-        ("Tests", Path("tests").exists()),
-    ]
-    implemented = [c[0] for c in checks if c[1]]
-    missing = [c[0] for c in checks if not c[1]]
+    """ECC self-assessment: uses DISCOVER's gap analysis."""
+    from ecc_loop.engine import _discover_gaps
+    gaps = _discover_gaps({}, {})
+    checks = ["seed.py", "scanner.py", "engine.py", "handlers.py", "cli.py", "run_verifier", "def goal", "tests/", "LOOP.md"]
+    implemented = [c for c in checks if not any(c in g for g in gaps)]
+    missing = [c for c in checks if any(c in g for g in gaps)]
     total = len(checks)
     score = int(len(implemented) / total * 100)
 
@@ -104,8 +96,11 @@ def cmd_improve() -> int:
         print(f"  ✅ {name}")
     for name in missing:
         print(f"  ❌ {name}")
-    if missing:
-        print(f"\nNext: implement {missing[0]}")
+    if gaps:
+        print(f"\nGaps detected by DISCOVER:")
+        for g in gaps:
+            print(f"  - {g}")
+        print(f"\nNext: implement {missing[0] if missing else 'nothing — all clear'}")
     return 0
 
 def main() -> int:

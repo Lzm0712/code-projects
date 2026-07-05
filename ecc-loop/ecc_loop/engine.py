@@ -32,29 +32,40 @@ def discover(goal: str, seed_path: str = "~/.hermes/ecc-loop-seed.json",
     """
     Stage 1: Understand the problem, gather context, identify goals.
 
-    When feedback is provided (from a failed iteration), it is injected
-    as additional context for the next planning cycle.
+    Performs an actual GAP ANALYSIS:
+    - Compares project state against LOOP.md config
+    - Scans skill changes and recent observations
+    - Surfaces concrete gaps as goals when feedback/context justifies it
     """
     state = seed.load_seed(seed_path)
     context: dict = {}
 
+    # Context from observations
     obs_info = reflection.analyze_observations()
     context["observations_count"] = obs_info["count"]
-    context["recent_observations"] = obs_info["recent"]
     context["patterns"] = obs_info.get("patterns", [])
     context["tracked_skills"] = len(state.get("skills", {}))
 
+    # Context from skill changes
     skill_changes = scanner.detect_changes()
     context["skill_changes"] = {
         "new": skill_changes["new"],
         "modified": skill_changes["modified"],
     }
 
-    # Inject iteration feedback
+    # Inject feedback from failed iteration
     if feedback:
         context["previous_feedback"] = feedback
 
+    # ── Actual discovery: gap analysis ──
+    gaps = _discover_gaps(state, context)
+    context["gaps_found"] = len(gaps)
+    context["gaps"] = gaps
+
+    # Build goals: user's goal + discovered gaps
     goals = _extract_goals(goal)
+    if gaps and _is_improvement_goal(goal):
+        goals.extend(gaps)
 
     return DiscoveryResult(
         issue=goal,
@@ -63,9 +74,49 @@ def discover(goal: str, seed_path: str = "~/.hermes/ecc-loop-seed.json",
         assumptions=[
             "Goal is achievable via skill/code execution in this environment",
             "EXECUTE can invoke handlers: shell, skill, code",
-            "Observations available for context gathering",
         ],
     )
+
+
+def _is_improvement_goal(goal: str) -> bool:
+    """Detect if goal is a self-improvement task."""
+    keywords = ["improve", "改进", "fix", "修复", "实现", "implement", "add", "添加"]
+    return any(k in goal.lower() for k in keywords)
+
+
+def _discover_gaps(state: dict, context: dict) -> list[str]:
+    """Compare project state against LOOP.md to find gaps."""
+    gaps = []
+
+    # Check if LOOP.md exists and analyze
+    loop_md = Path(__file__).parent.parent / "LOOP.md"
+    if not loop_md.exists():
+        gaps.append("Missing LOOP.md configuration")
+
+    # Check core modules
+    for module in ["seed.py", "scanner.py", "engine.py", "handlers.py", "cli.py"]:
+        if not (Path(__file__).parent / module).exists():
+            gaps.append(f"Missing core module: {module}")
+
+    # Check verifier capability
+    engine_src = (Path(__file__).parent / "engine.py")
+    if engine_src.exists():
+        content = engine_src.read_text()
+        if "run_verifier" not in content:
+            gaps.append("Missing independent verifier (run_verifier)")
+        if "def goal" not in content:
+            gaps.append("Missing /goal pattern")
+
+    # Check tests
+    tests_dir = Path(__file__).parent.parent / "tests"
+    if not tests_dir.exists() or not list(tests_dir.glob("test_*.py")):
+        gaps.append("Missing or empty tests directory")
+
+    # Check skill changes suggest action
+    if context.get("skill_changes", {}).get("new"):
+        gaps.append("New skills detected — review and integrate")
+
+    return gaps
 
 
 def _extract_goals(goal: str) -> list[str]:
