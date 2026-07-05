@@ -23,6 +23,7 @@ from ecc_loop.models import (
 )
 from ecc_loop import seed, scanner, reflection
 from ecc_loop.safety import safety_check as _safety_check
+from ecc_loop.continual import extract_patterns as _extract_patterns
 from ecc_loop.run_log import record_run as _record_run
 from ecc_loop.logger import log as _log
 from ecc_loop.goal_freeze import freeze as _freeze, check as _check_frozen
@@ -631,6 +632,9 @@ def loop(
         # FAIL: update error tracking (shared helper)
         error = result.feedback
         _update_fail_state(state, error, seed_path)
+        patterns = _extract_patterns()
+        if patterns:
+            _log("LEARN", goal, f"patterns: {len(patterns)}", state["iteration"])
         from ecc_loop.learning import record; record("cycle", 0, {"goal": goal[:50], "error": error[:100]})
 
         # Feed failure back into next DISCOVER

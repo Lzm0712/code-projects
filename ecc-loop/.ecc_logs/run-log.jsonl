@@ -1,1 +1,7 @@
 {"ts": "2026-07-05T15:56:02.519312", "goal": "test", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:15:21.242309", "goal": "test loop goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:15:21.343087", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:15:21.429135", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:15:21.446122", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:15:21.580958", "goal": "from pathlib import Path\np = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmpotat2ikg/test", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:15:21.707427", "goal": "from pathlib import Path\nmarker = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmp2nqufx86", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
