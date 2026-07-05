@@ -125,14 +125,18 @@ def main() -> int:
 
     if cmd == "goal":
         if len(sys.argv) < 4:
-            print("Usage: ecc goal <task> <condition>")
-            print("  e.g.  ecc goal 'fix lint' 'pytest -q && flake8 src/'")
+            print("Usage: ecc goal <task> -- <condition>")
+            print("  e.g.  ecc goal fix lint -- pytest -q")
             return 1
-        parts = sys.argv[2:]
-        # Find the separator between task and condition
-        # Simple: first word is task, rest is condition
-        # Better: use -- separator or take last arg as condition
-        return cmd_goal(parts[0], " ".join(parts[1:]))
+        args = sys.argv[2:]
+        if "--" in args:
+            sep = args.index("--")
+            task = " ".join(args[:sep])
+            condition = " ".join(args[sep+1:])
+        else:
+            task = args[0]
+            condition = " ".join(args[1:])
+        return cmd_goal(task, condition)
 
     if cmd == "loop":
         if len(sys.argv) < 3:
