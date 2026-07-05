@@ -1,7 +1,7 @@
 {
   "history": [
     {
-      "ts": "2026-07-05T15:30:55.833620",
+      "ts": "2026-07-05T15:49:59.357282",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -10,7 +10,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:30:55.856921",
+      "ts": "2026-07-05T15:49:59.373196",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -19,7 +19,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:30:55.881400",
+      "ts": "2026-07-05T15:49:59.389144",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -28,7 +28,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:30:55.964442",
+      "ts": "2026-07-05T15:49:59.406467",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -37,7 +37,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:30:56.272282",
+      "ts": "2026-07-05T15:49:59.611707",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -46,7 +46,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:30:56.309883",
+      "ts": "2026-07-05T15:49:59.630499",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -55,7 +55,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:30:56.345039",
+      "ts": "2026-07-05T15:49:59.647688",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -64,7 +64,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:30:56.380007",
+      "ts": "2026-07-05T15:49:59.665017",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -73,7 +73,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:30:56.418068",
+      "ts": "2026-07-05T15:49:59.743419",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -82,7 +82,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:30:56.459121",
+      "ts": "2026-07-05T15:49:59.773658",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -91,97 +91,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:31:26.063962",
-      "metric": "cycle",
-      "value": 0,
-      "tags": {
-        "goal": "test goal",
-        "error": "Failed tasks: task_1"
-      }
-    },
-    {
-      "ts": "2026-07-05T15:31:26.097105",
-      "metric": "cycle",
-      "value": 0,
-      "tags": {
-        "goal": "test goal",
-        "error": "Failed tasks: task_1"
-      }
-    },
-    {
-      "ts": "2026-07-05T15:31:26.131048",
-      "metric": "cycle",
-      "value": 0,
-      "tags": {
-        "goal": "test goal",
-        "error": "Failed tasks: task_1"
-      }
-    },
-    {
-      "ts": "2026-07-05T15:31:26.168435",
-      "metric": "cycle",
-      "value": 0,
-      "tags": {
-        "goal": "test goal",
-        "error": "Failed tasks: task_1"
-      }
-    },
-    {
-      "ts": "2026-07-05T15:31:26.542071",
-      "metric": "cycle",
-      "value": 0,
-      "tags": {
-        "goal": "__result__ = 1/0",
-        "error": "Failed tasks: task_1"
-      }
-    },
-    {
-      "ts": "2026-07-05T15:31:26.572935",
-      "metric": "cycle",
-      "value": 0,
-      "tags": {
-        "goal": "__result__ = 1/0",
-        "error": "Failed tasks: task_1"
-      }
-    },
-    {
-      "ts": "2026-07-05T15:31:26.606360",
-      "metric": "cycle",
-      "value": 0,
-      "tags": {
-        "goal": "__result__ = 1/0",
-        "error": "Failed tasks: task_1"
-      }
-    },
-    {
-      "ts": "2026-07-05T15:31:26.639039",
-      "metric": "cycle",
-      "value": 0,
-      "tags": {
-        "goal": "__result__ = 1/0",
-        "error": "Failed tasks: task_1"
-      }
-    },
-    {
-      "ts": "2026-07-05T15:31:26.671154",
-      "metric": "cycle",
-      "value": 0,
-      "tags": {
-        "goal": "__result__ = 1/0",
-        "error": "Failed tasks: task_1"
-      }
-    },
-    {
-      "ts": "2026-07-05T15:31:26.708403",
-      "metric": "cycle",
-      "value": 0,
-      "tags": {
-        "goal": "from pathlib import Path\nmarker = Path('/var/folde",
-        "error": "Failed tasks: task_1"
-      }
-    },
-    {
-      "ts": "2026-07-05T15:31:26.750726",
+      "ts": "2026-07-05T15:49:59.798577",
       "metric": "cycle",
       "value": 1,
       "tags": {
@@ -189,7 +99,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:31:26.751656",
+      "ts": "2026-07-05T15:49:59.799030",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -198,7 +108,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:31:26.752393",
+      "ts": "2026-07-05T15:49:59.799505",
       "metric": "cycle",
       "value": 1,
       "tags": {
@@ -206,7 +116,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:36:00.360041",
+      "ts": "2026-07-05T15:52:16.878143",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -215,7 +125,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:36:00.394371",
+      "ts": "2026-07-05T15:52:16.894201",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -224,7 +134,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:36:00.428971",
+      "ts": "2026-07-05T15:52:16.909934",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -233,7 +143,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:36:00.463833",
+      "ts": "2026-07-05T15:52:16.927358",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -242,7 +152,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:36:00.853275",
+      "ts": "2026-07-05T15:52:17.201451",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -251,7 +161,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:36:00.884694",
+      "ts": "2026-07-05T15:52:17.222976",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -260,7 +170,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:36:00.914052",
+      "ts": "2026-07-05T15:52:17.240392",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -269,7 +179,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:36:00.945400",
+      "ts": "2026-07-05T15:52:17.258635",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -278,7 +188,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:36:00.976906",
+      "ts": "2026-07-05T15:52:17.276229",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -287,7 +197,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:36:01.015145",
+      "ts": "2026-07-05T15:52:17.296600",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -296,7 +206,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:36:01.053206",
+      "ts": "2026-07-05T15:52:17.317137",
       "metric": "cycle",
       "value": 1,
       "tags": {
@@ -304,7 +214,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:36:01.054301",
+      "ts": "2026-07-05T15:52:17.317669",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -313,7 +223,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:36:01.055969",
+      "ts": "2026-07-05T15:52:17.318148",
       "metric": "cycle",
       "value": 1,
       "tags": {
@@ -321,52 +231,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:37:31.318599",
-      "metric": "cycle",
-      "value": 0,
-      "tags": {
-        "goal": "持续改进: 搜索loop-engineering最佳实践，发现ECC缺失功能，实现并验证\n\nimpo",
-        "error": "Failed tasks: task_1"
-      }
-    },
-    {
-      "ts": "2026-07-05T15:37:31.374132",
-      "metric": "cycle",
-      "value": 0,
-      "tags": {
-        "goal": "持续改进: 搜索loop-engineering最佳实践，发现ECC缺失功能，实现并验证\n\nimpo",
-        "error": "Failed tasks: task_1"
-      }
-    },
-    {
-      "ts": "2026-07-05T15:37:31.431245",
-      "metric": "cycle",
-      "value": 0,
-      "tags": {
-        "goal": "持续改进: 搜索loop-engineering最佳实践，发现ECC缺失功能，实现并验证\n\nimpo",
-        "error": "Failed tasks: task_1"
-      }
-    },
-    {
-      "ts": "2026-07-05T15:37:31.485348",
-      "metric": "cycle",
-      "value": 0,
-      "tags": {
-        "goal": "持续改进: 搜索loop-engineering最佳实践，发现ECC缺失功能，实现并验证\n\nimpo",
-        "error": "Failed tasks: task_1"
-      }
-    },
-    {
-      "ts": "2026-07-05T15:37:31.537227",
-      "metric": "cycle",
-      "value": 0,
-      "tags": {
-        "goal": "持续改进: 搜索loop-engineering最佳实践，发现ECC缺失功能，实现并验证\n\nimpo",
-        "error": "Failed tasks: task_1"
-      }
-    },
-    {
-      "ts": "2026-07-05T15:38:27.031023",
+      "ts": "2026-07-05T15:55:03.181366",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -375,7 +240,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:38:27.066041",
+      "ts": "2026-07-05T15:55:03.197930",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -384,7 +249,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:38:27.102150",
+      "ts": "2026-07-05T15:55:03.216380",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -393,7 +258,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:38:27.138017",
+      "ts": "2026-07-05T15:55:03.236921",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -402,7 +267,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:38:27.514299",
+      "ts": "2026-07-05T15:55:03.433892",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -411,7 +276,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:38:27.548033",
+      "ts": "2026-07-05T15:55:03.450600",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -420,7 +285,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:38:27.583232",
+      "ts": "2026-07-05T15:55:03.467278",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -429,7 +294,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:38:27.617389",
+      "ts": "2026-07-05T15:55:03.482434",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -438,7 +303,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:38:27.651496",
+      "ts": "2026-07-05T15:55:03.500326",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -447,7 +312,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:38:27.689011",
+      "ts": "2026-07-05T15:55:03.575103",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -456,7 +321,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:38:27.730505",
+      "ts": "2026-07-05T15:55:03.601357",
       "metric": "cycle",
       "value": 1,
       "tags": {
@@ -464,7 +329,7 @@
       }
     },
     {
-      "ts": "2026-07-05T15:38:27.731858",
+      "ts": "2026-07-05T15:55:03.602097",
       "metric": "cycle",
       "value": 0,
       "tags": {
@@ -473,11 +338,153 @@
       }
     },
     {
-      "ts": "2026-07-05T15:38:27.733247",
+      "ts": "2026-07-05T15:55:03.602858",
       "metric": "cycle",
       "value": 1,
       "tags": {
         "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:55:51.199824",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:55:51.217905",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:55:51.234960",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:55:51.254052",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:55:51.484805",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:55:51.507090",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:55:51.584037",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:55:51.606785",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:55:51.625700",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:55:51.647034",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\nmarker = Path('/var/folde",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:55:51.675822",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:55:51.676800",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test",
+        "error": "fail"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:55:51.677746",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:55:56.704620",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test run-log",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:55:56.722043",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test run-log",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:55:56.739108",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test run-log",
+        "error": "Failed tasks: task_1"
       }
     }
   ]

@@ -23,6 +23,7 @@ from ecc_loop.models import (
 )
 from ecc_loop import seed, scanner, reflection
 from ecc_loop.safety import safety_check as _safety_check
+from ecc_loop.run_log import record_run as _record_run
 from ecc_loop.logger import log as _log
 from ecc_loop.goal_freeze import freeze as _freeze, check as _check_frozen
 from ecc_loop.precise_specs import Specs
@@ -624,6 +625,7 @@ def loop(
             else:
                 _log("PASS", goal, "no verifier", state['iteration'])
                 _succeed(state, goal, seed_path)
+                _record_run(goal, "PASS", state["iteration"])
                 return result
 
         # FAIL: update error tracking (shared helper)

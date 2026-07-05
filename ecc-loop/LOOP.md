@@ -69,3 +69,18 @@ L3 (future) — Autonomous
   ├─ Self-scheduling
   └─ Human approval gates for risky changes
 ```
+
+## Budget
+
+| Item | Limit |
+|------|-------|
+| Max iterations/run | 5 |
+| Max consecutive failures | 3 |
+| Estimated tokens/run | ~2000 (DeepSeek) |
+| Max tokens/day | 50,000 |
+| On exceed | Pause loop, escalate |
+
+## Run Log
+
+Structured JSONL at `.ecc_logs/run-log.jsonl`.
+View: `python3 -c "from ecc_loop.run_log import daily_stats; print(daily_stats())"`
