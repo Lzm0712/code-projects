@@ -43,6 +43,8 @@
 | `llm.py` | 140 | DeepSeek LLM 集成 (generate_fix + LLMHandler) | LLM |
 | `run_log.py` | 55 | 结构化 JSONL 运行日志 | operating-loops |
 | `safety.py` | 43 | denylist + human gates | safety.md |
+| `reader.py` | 66 | 读取 diff/日志/进度 构建上下文 | opencode-loop |
+| `checkpoint.py` | 70 | progress.md 进度追踪 | opencode-loop |
 | `continual.py` | 70 | 从运行中提取模式 | everything-claude-code |
 
 ## 五阶段 Pipeline

@@ -25,6 +25,8 @@ from ecc_loop import seed, scanner, reflection
 from ecc_loop.safety import safety_check as _safety_check
 from ecc_loop.continual import extract_patterns as _extract_patterns
 from ecc_loop.run_log import record_run as _record_run
+from ecc_loop.reader import read_context as _read_context
+from ecc_loop.checkpoint import save_checkpoint as _save_checkpoint
 from ecc_loop.logger import log as _log
 from ecc_loop.goal_freeze import freeze as _freeze, check as _check_frozen
 from ecc_loop.precise_specs import Specs
@@ -627,6 +629,7 @@ def loop(
                 _log("PASS", goal, "no verifier", state['iteration'])
                 _succeed(state, goal, seed_path)
                 _record_run(goal, "PASS", state["iteration"])
+                _save_checkpoint(goal, "PASS", state["iteration"], "No verifier")
                 return result
 
         # FAIL: update error tracking (shared helper)
