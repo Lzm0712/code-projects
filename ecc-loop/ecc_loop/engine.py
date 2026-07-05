@@ -382,17 +382,13 @@ def run_reviewer(project_root: str = "") -> VerifyResult:
         )
 
     # Ask LLM to review
-    review_prompt = f"""You are a STRICT code reviewer. Reply with ONLY one word and a brief reason.
+    review_prompt = f"""Review this diff. Respond EXACTLY one line: 'PASS' or 'FAIL: <reason>'.
 
-Review this diff for: security issues, anti-patterns, unused code.
+{diff[:2000]}
 
-{diff[:3000]}
+Check: hardcoded secrets, eval/exec misuse, broken imports, unused code.
 
-Reply format (exactly one line):
-PASS: (why clean)
-FAIL: (specific issue)
-
-Do NOT generate fix code. Do NOT add explanations."""
+Your response:"""
 
     try:
         response = _llm_call([{"role": "user", "content": review_prompt}])
