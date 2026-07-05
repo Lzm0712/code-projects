@@ -340,6 +340,104 @@ def loop(
         feedback = f"[Iteration {state['iteration']}] {error}"
 
 
+# ── /goal: run-until-condition pattern ────────────────────────────────
+
+
+def goal(
+    task: str,
+    condition_cmd: str,
+    config: Optional[CircuitBreakerConfig] = None,
+    seed_path: str = "~/.hermes/ecc-loop-seed.json",
+) -> VerifyResult:
+    """
+    /goal pattern — iterate until an external condition is met.
+
+    Unlike loop() which verifies with pytest, goal() accepts an
+    arbitrary shell command as the stop condition. A SEPARATE
+    subprocess checks the condition (not the executor).
+
+        ecc goal "fix lint errors" "pytest -q && flake8 src/"
+
+    DISCOVER → PLAN → EXECUTE → (condition met?)
+                                    ├─ YES → done
+                                    └─ NO  → ITERATE
+
+    Circuit breaker prevents infinite loops.
+    """
+    cfg = config or CircuitBreakerConfig()
+    state = seed.load_seed(seed_path)
+
+    if state.get("current_goal") != task:
+        state["iteration"] = 0
+        state["consecutive_failures"] = 0
+        state["total_attempts"] = 0
+        state["last_error"] = ""
+
+    feedback: Optional[str] = None
+
+    while True:
+        state["total_attempts"] = state.get("total_attempts", 0) + 1
+        state["iteration"] = state.get("iteration", 0) + 1
+
+        cb = check_circuit_breaker(state, cfg)
+        if cb.tripped:
+            seed.save_seed(state, seed_path)
+            return VerifyResult(
+                status=VerifyStatus.FAIL, passed_tasks=[], failed_tasks=[],
+                summary=f"CIRCUIT BREAKER TRIPPED — {cb.trip_reason}",
+                feedback=cb.trip_reason,
+            )
+
+        seed.save_seed(state, seed_path)
+
+        # Run one iteration
+        result = run_one(task, feedback=feedback, seed_path=seed_path)
+
+        if result.status == VerifyStatus.PASS:
+            # Check external condition (separate process = referee)
+            try:
+                proc = _subprocess.run(
+                    condition_cmd, shell=True, capture_output=True,
+                    text=True, timeout=30, cwd=Path(__file__).parent.parent,
+                )
+                if proc.returncode == 0:
+                    state["last_error"] = ""
+                    state["consecutive_failures"] = 0
+                    seed.mark_complete(state, task)
+                    seed.save_seed(state, seed_path)
+                    return VerifyResult(
+                        status=VerifyStatus.PASS,
+                        passed_tasks=["goal"],
+                        failed_tasks=[],
+                        summary=f"Goal met after {state['iteration']} iteration(s)",
+                        feedback="",
+                    )
+
+                # Condition failed — iterate
+                result = VerifyResult(
+                    status=VerifyStatus.FAIL, passed_tasks=[], failed_tasks=["condition"],
+                    summary=f"Condition not met (exit {proc.returncode})",
+                    feedback=proc.stderr[:200] or proc.stdout[:200],
+                )
+            except Exception as e:
+                result = VerifyResult(
+                    status=VerifyStatus.FAIL, passed_tasks=[], failed_tasks=["condition"],
+                    summary=f"Condition check error: {e}",
+                    feedback=str(e),
+                )
+
+        # FAIL: update error tracking, prepare feedback for re-entry
+        error = result.feedback
+        prev_error = state.get("last_error", "")
+        if error == prev_error:
+            state["consecutive_failures"] = state.get("consecutive_failures", 0) + 1
+        else:
+            state["consecutive_failures"] = 1
+        state["last_error"] = error
+        seed.save_seed(state, seed_path)
+        feedback = f"[Iteration {state['iteration']}] {error}"
+
+
 # ── Legacy wrapper ──────────────────────────────────────────────────
 
 def run(goal: str, config: Optional[CircuitBreakerConfig] = None,

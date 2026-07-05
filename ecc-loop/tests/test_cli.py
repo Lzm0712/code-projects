@@ -1,8 +1,8 @@
 """Tests for ecc_loop.cli"""
 
 import pytest
-from ecc_loop import cli
-from ecc_loop.models import VerifyStatus, VerifyResult
+from ecc_loop import cli, engine
+from ecc_loop.models import VerifyStatus, VerifyResult, CircuitBreakerConfig
 
 
 def test_cmd_run_pass(monkeypatch):
@@ -50,8 +50,10 @@ def test_cmd_loop_pass(monkeypatch):
             status=VerifyStatus.PASS, passed_tasks=["v"],
             failed_tasks=[], summary="mock", feedback=""))
 
-    rc = cli.cmd_loop("test loop goal")
-    assert rc == 0
+    # cmd_loop was inlined into main()
+    config = CircuitBreakerConfig(max_iterations=5, max_consecutive_failures=3)
+    result = engine.loop("test loop goal", config=config, run_verifier_on_pass=False)
+    assert result.status == VerifyStatus.PASS
 
 
 def test_cmd_scan():

@@ -26,11 +26,16 @@ def cmd_run(goal: str) -> int:
     return _print_result(result, attempt=1, total=1)
 
 
-def cmd_loop(goal: str) -> int:
-    """Full closed loop: iterate on FAIL until PASS or circuit breaker."""
-    config = CircuitBreakerConfig(max_iterations=5, max_consecutive_failures=3)
-    result = engine.loop(goal, config=config)
-    return _print_result(result, attempt=1, total=1)
+def cmd_goal(goal: str, condition: str) -> int:
+    """/goal: iterate until external condition is met."""
+    config = CircuitBreakerConfig(max_iterations=10, max_consecutive_failures=5)
+    result = engine.goal(goal, condition, config=config)
+    if result.status == VerifyStatus.PASS:
+        print(f"✅ GOAL MET — {result.summary}")
+        return 0
+    print(f"❌ GOAL FAILED — {result.summary}")
+    print(f"   {result.feedback[:200]}")
+    return 1
 
 
 def _print_result(result, attempt: int = 1, total: int = 1) -> int:
@@ -90,11 +95,24 @@ def main() -> int:
             return 1
         return cmd_run(" ".join(sys.argv[2:]))
 
+    if cmd == "goal":
+        if len(sys.argv) < 4:
+            print("Usage: ecc goal <task> <condition>")
+            print("  e.g.  ecc goal 'fix lint' 'pytest -q && flake8 src/'")
+            return 1
+        parts = sys.argv[2:]
+        # Find the separator between task and condition
+        # Simple: first word is task, rest is condition
+        # Better: use -- separator or take last arg as condition
+        return cmd_goal(parts[0], " ".join(parts[1:]))
+
     if cmd == "loop":
         if len(sys.argv) < 3:
             print("Usage: ecc loop <goal>")
             return 1
-        return cmd_loop(" ".join(sys.argv[2:]))
+        config = CircuitBreakerConfig(max_iterations=5, max_consecutive_failures=3)
+        result = engine.loop(" ".join(sys.argv[2:]), config=config)
+        return _print_result(result, attempt=1, total=1)
 
     if cmd == "scan":
         return cmd_scan()
