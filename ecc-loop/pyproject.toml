@@ -8,5 +8,8 @@ version = "1.0.0"
 description = "Evolutionary Consciousness Code Loop — Hermes self-improvement cycle"
 requires-python = ">=3.11"
 
+[project.scripts]
+ecc = "ecc_loop.cli:main"
+
 [tool.setuptools.packages.find]
 include = ["ecc_loop*"]
