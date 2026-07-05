@@ -23,6 +23,7 @@ from ecc_loop.models import (
 )
 from ecc_loop import seed, scanner, reflection
 from ecc_loop.logger import log as _log
+from ecc_loop.goal_freeze import freeze as _freeze, check as _check_frozen
 
 
 
@@ -567,6 +568,9 @@ def loop(
         state["last_error"] = ""
 
     feedback: Optional[str] = None
+
+    # Freeze goal spec (Best Practice #2: 保持规格不变)
+    _freeze(goal, seed_path)
 
     while True:
         # ── Circuit breaker + seed sync (shared helper) ──
