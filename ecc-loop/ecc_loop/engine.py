@@ -22,6 +22,7 @@ from ecc_loop.models import (
     CircuitBreakerConfig, CircuitBreakerState,
 )
 from ecc_loop import seed, scanner, reflection
+from ecc_loop.safety import safety_check as _safety_check
 from ecc_loop.logger import log as _log
 from ecc_loop.goal_freeze import freeze as _freeze, check as _check_frozen
 from ecc_loop.precise_specs import Specs
@@ -247,6 +248,12 @@ def execute(plan: Plan) -> ExecutionResult:
     results: list[Task] = []
 
     for task in plan.tasks:
+        safe, reason = _safety_check(task.description)
+        if not safe:
+            task.error = f"SAFETY BLOCK: {reason}"
+            task.status = TaskStatus.FAIL
+            results.append(task)
+            continue
         task.status = TaskStatus.RUNNING
         try:
             output = _eng._execute_task(task)

@@ -319,6 +319,166 @@
       "tags": {
         "goal": "test"
       }
+    },
+    {
+      "ts": "2026-07-05T15:37:31.318599",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "持续改进: 搜索loop-engineering最佳实践，发现ECC缺失功能，实现并验证\n\nimpo",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:37:31.374132",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "持续改进: 搜索loop-engineering最佳实践，发现ECC缺失功能，实现并验证\n\nimpo",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:37:31.431245",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "持续改进: 搜索loop-engineering最佳实践，发现ECC缺失功能，实现并验证\n\nimpo",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:37:31.485348",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "持续改进: 搜索loop-engineering最佳实践，发现ECC缺失功能，实现并验证\n\nimpo",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:37:31.537227",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "持续改进: 搜索loop-engineering最佳实践，发现ECC缺失功能，实现并验证\n\nimpo",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:38:27.031023",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:38:27.066041",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:38:27.102150",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:38:27.138017",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:38:27.514299",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:38:27.548033",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:38:27.583232",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:38:27.617389",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:38:27.651496",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:38:27.689011",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\nmarker = Path('/var/folde",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:38:27.730505",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:38:27.731858",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test",
+        "error": "fail"
+      }
+    },
+    {
+      "ts": "2026-07-05T15:38:27.733247",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
     }
   ]
 }
