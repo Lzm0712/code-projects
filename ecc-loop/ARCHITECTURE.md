@@ -112,7 +112,7 @@ EXECUTE
 
 | 组件 | ECC | 对应 |
 |------|-----|------|
-| Automations | ⚠️ 任务驱动 | discover_work + Hermes cron |
+| Automations | ✅ | Hermes cron (每1h巡检+每日9点日报) |
 | Worktrees | ✅ | WorktreeHandler |
 | Skills | ✅ | scanner + LOOP.md |
 | Plugins | ⚠️ | 文件系统 + LLM (待MCP) |
