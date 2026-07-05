@@ -80,6 +80,34 @@ def cmd_status() -> int:
     return 0
 
 
+def cmd_improve() -> int:
+    """ECC self-assessment: checks what's implemented vs LOOP.md."""
+    loop_md = Path(__file__).parent.parent / "LOOP.md"
+    checks = [
+        ("State file (seed.json)", Path("ecc_loop/seed.py").exists()),
+        ("Skill scanner", Path("ecc_loop/scanner.py").exists()),
+        ("Circuit breaker", "CircuitBreaker" in (Path("ecc_loop/engine.py").read_text())),
+        ("Independent verifier", "run_verifier" in (Path("ecc_loop/engine.py").read_text())),
+        ("Goal pattern", "def goal" in (Path("ecc_loop/engine.py").read_text())),
+        ("Handler auto-detect", "_SHELL_PREFIXES" in (Path("ecc_loop/handlers.py").read_text())),
+        ("LOOP.md config", loop_md.exists()),
+        ("Tests", Path("tests").exists()),
+    ]
+    implemented = [c[0] for c in checks if c[1]]
+    missing = [c[0] for c in checks if not c[1]]
+    total = len(checks)
+    score = int(len(implemented) / total * 100)
+
+    print(f"\nECC Self-Assessment: {score}/100 ({len(implemented)}/{total})")
+    print("─" * 40)
+    for name in implemented:
+        print(f"  ✅ {name}")
+    for name in missing:
+        print(f"  ❌ {name}")
+    if missing:
+        print(f"\nNext: implement {missing[0]}")
+    return 0
+
 def main() -> int:
     if len(sys.argv) < 2:
         print("Usage: ecc <run|loop|scan|seed|status> [goal]")
@@ -122,6 +150,9 @@ def main() -> int:
 
     if cmd == "status":
         return cmd_status()
+
+    if cmd == "improve":
+        return cmd_improve()
 
     print(f"Unknown command: {cmd}")
     return 1
