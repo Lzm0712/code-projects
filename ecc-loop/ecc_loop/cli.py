@@ -80,6 +80,59 @@ def cmd_status() -> int:
     return 0
 
 
+def cmd_fix() -> int:
+    """Self-heal: DISCOVER gaps → LLM generates fixes → EXECUTE → VERIFY."""
+    from ecc_loop.engine import _discover_gaps
+    from ecc_loop.llm import generate_fix
+    from ecc_loop.handlers import CodeHandler
+    from ecc_loop.models import Task
+
+    print("ECC Self-Heal: discovering gaps...")
+    gaps = _discover_gaps({}, {})
+
+    if not gaps:
+        print("✅ No gaps found. ECC is healthy.")
+        return 0
+
+    print(f"Found {len(gaps)} gap(s):")
+    for g in gaps:
+        print(f"  ❌ {g}")
+
+    for i, gap in enumerate(gaps):
+        print(f"\n── Fixing gap {i+1}/{len(gaps)}: {gap} ──")
+        print("  Generating fix via LLM...")
+        try:
+            fix_code = generate_fix(gap)
+            print("  Generated code:")
+            for line in fix_code.splitlines()[:5]:
+                print(f"    {line}")
+            if len(fix_code.splitlines()) > 5:
+                print(f"    ... ({len(fix_code.splitlines())} lines total)")
+
+            print("  Executing...")
+            from ecc_loop.llm import LLMHandler
+            task = Task(name=f"fix_gap_{i+1}", description=gap)
+            result = LLMHandler()(task)
+            print(f"  ✅ {result}")
+        except Exception as e:
+            print(f"  ❌ Failed: {e}")
+            return 1
+
+    print(f"\n── Verification ──")
+    import subprocess
+    proc = subprocess.run(
+        ["python3", "-m", "pytest", "-q",
+         "tests/test_seed.py", "tests/test_models.py", "tests/test_engine.py"],
+        capture_output=True, text=True, timeout=30
+    )
+    if proc.returncode == 0:
+        print("✅ All tests pass")
+    else:
+        print(f"❌ Tests failed:\n{proc.stderr[:200]}")
+        return 1
+    return 0
+
+
 def cmd_improve() -> int:
     """ECC self-assessment: uses DISCOVER's gap analysis."""
     from ecc_loop.engine import _discover_gaps
@@ -152,6 +205,9 @@ def main() -> int:
 
     if cmd == "improve":
         return cmd_improve()
+
+    if cmd == "fix":
+        return cmd_fix()
 
     print(f"Unknown command: {cmd}")
     return 1
