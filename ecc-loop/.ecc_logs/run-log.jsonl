@@ -11,3 +11,188 @@
 {"ts": "2026-07-05T16:26:25.585409", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
 {"ts": "2026-07-05T16:26:25.749655", "goal": "from pathlib import Path\np = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmpo2h1ewa6/test", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
 {"ts": "2026-07-05T16:26:25.950124", "goal": "from pathlib import Path\nmarker = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmp_c315il1", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:09.858212", "goal": "test loop goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:09.959203", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:10.043674", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:10.062976", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:10.201149", "goal": "from pathlib import Path\np = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmpnggjbk0z/test", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:10.331510", "goal": "from pathlib import Path\nmarker = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmp6d_067dh", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:15.869324", "goal": "test loop goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:16.023917", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:16.156715", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:16.183119", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:16.365036", "goal": "from pathlib import Path\np = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmpagi5ag8k/test", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:16.559009", "goal": "from pathlib import Path\nmarker = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmpph4t2l70", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:17.222479", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:17.356765", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:17.383139", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:17.891385", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:18.024000", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:18.050139", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:18.615772", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:18.749292", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:18.775823", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:19.283546", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:19.417560", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:19.443960", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:19.888143", "goal": "test loop goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:20.045311", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:20.179944", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:20.206646", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:20.389276", "goal": "from pathlib import Path\np = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmpn0ees99x/test", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:20.590706", "goal": "from pathlib import Path\nmarker = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmpe5egxjiv", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:21.264024", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:21.399855", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:21.426359", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:21.933171", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:22.066365", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:22.092100", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:22.666045", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:22.801504", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:22.827985", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:23.331180", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:23.508398", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:23.535604", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:23.987500", "goal": "test loop goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:24.145035", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:24.282488", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:24.309143", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:24.492785", "goal": "from pathlib import Path\np = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmp4144h0xp/test", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:24.691967", "goal": "from pathlib import Path\nmarker = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmpvr75kvxr", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:25.357491", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:25.494609", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:25.521733", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:26.026910", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:26.164118", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:26.193279", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:26.765013", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:26.903129", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:26.930252", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:27.445598", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:27.585327", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:27.612279", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:28.069264", "goal": "test loop goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:28.225831", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:28.366591", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:28.393441", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:28.581990", "goal": "from pathlib import Path\np = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmpxbn4iqhm/test", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:28.784321", "goal": "from pathlib import Path\nmarker = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmpqnxkebrp", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:29.460558", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:29.601121", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:29.628051", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:30.134245", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:30.274870", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:30.301860", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:30.876027", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:31.016764", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:31.044049", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:31.553066", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:31.694668", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:31.721621", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:32.166428", "goal": "test loop goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:32.323431", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:32.467619", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:32.494888", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:32.679293", "goal": "from pathlib import Path\np = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmp3md0ebd7/test", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:32.892152", "goal": "from pathlib import Path\nmarker = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmpv0mhv02r", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:33.562183", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:33.704468", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:33.731330", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:34.242043", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:34.386651", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:34.413850", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:34.983721", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:35.128640", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:35.155768", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:35.668173", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:35.814776", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:35.842074", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:36.288353", "goal": "test loop goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:36.446200", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:36.591692", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:36.619145", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:36.803062", "goal": "from pathlib import Path\np = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmpaak8jmcu/test", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:37.018512", "goal": "from pathlib import Path\nmarker = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmp33_uh25z", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:37.696137", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:37.840435", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:37.867405", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:38.374952", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:38.521053", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:38.548668", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:39.121367", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:39.265822", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:39.292958", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:39.798098", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:39.942063", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:39.969405", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:40.427256", "goal": "test loop goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:40.585532", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:40.736051", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:40.763143", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:40.947080", "goal": "from pathlib import Path\np = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmp377i5ro8/test", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:41.159327", "goal": "from pathlib import Path\nmarker = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmpb0jyhgc3", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:41.836278", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:41.983916", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:42.011234", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:42.519055", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:42.667434", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:42.693985", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:43.271979", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:43.418744", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:43.446032", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:43.960386", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:44.108972", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:44.136300", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:44.594972", "goal": "test loop goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:44.755061", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:44.905126", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:44.932383", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:45.119027", "goal": "from pathlib import Path\np = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmpn8awczvh/test", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:56.801832", "goal": "test loop goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:56.911887", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:57.011946", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:57.028760", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:57.172010", "goal": "from pathlib import Path\np = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmpsxgsit8z/test", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:57.321717", "goal": "from pathlib import Path\nmarker = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmphaxtpaqn", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:58.006407", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:58.108444", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:58.126283", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:58.678533", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:58.781241", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:58.798659", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:59.410599", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:59.515579", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:30:59.533353", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:00.091427", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:00.195678", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:00.213500", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:00.682587", "goal": "test loop goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:00.839297", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:00.987754", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:01.014563", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:01.200800", "goal": "from pathlib import Path\np = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmpkmbbecd4/test", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:01.415506", "goal": "from pathlib import Path\nmarker = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmp8oajhhd4", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:02.099883", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:02.248608", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:02.275546", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:02.827379", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:02.975594", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:03.002269", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:03.576609", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:03.727011", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:03.753830", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:04.259304", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:04.408669", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:04.435593", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:04.882439", "goal": "test loop goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:05.040097", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:05.194156", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:05.221109", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:05.403475", "goal": "from pathlib import Path\np = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmpia8vep8e/test", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:05.621444", "goal": "from pathlib import Path\nmarker = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmpkieea50h", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:42.157519", "goal": "test loop goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:42.262669", "goal": "test goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:42.368515", "goal": "test goal", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:42.386172", "goal": "same goal", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:42.520329", "goal": "from pathlib import Path\np = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmpxom_ppx6/test", "status": "PASS", "iterations": 1, "tokens_est": 0, "errors": [], "duration_ms": 0}
+{"ts": "2026-07-05T16:31:42.683010", "goal": "from pathlib import Path\nmarker = Path('/var/folders/46/ggdw3pdn3rj8bgv25zspz0hr0000gn/T/tmpo7lo7n8h", "status": "PASS", "iterations": 2, "tokens_est": 0, "errors": [], "duration_ms": 0}

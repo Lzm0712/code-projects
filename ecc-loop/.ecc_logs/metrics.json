@@ -716,6 +716,3393 @@
       "tags": {
         "goal": "test"
       }
+    },
+    {
+      "ts": "2026-07-05T16:30:09.975947",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:09.991708",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:10.008126",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:10.026069",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:10.222712",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:10.240445",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:10.258297",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:10.275935",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:10.293454",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:10.313093",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\nmarker = Path('/var/folde",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:10.334436",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:10.335551",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test",
+        "error": "fail"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:10.336657",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:16.050386",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:16.076724",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:16.102589",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:16.130098",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:16.395875",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:16.422887",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:16.449622",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:16.476277",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:16.503131",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:16.532041",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\nmarker = Path('/var/folde",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:16.562078",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:16.563277",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test",
+        "error": "fail"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:16.564480",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:16.744915",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": "Failed tasks: task_2, task_3, task_4, task_5, task_6"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:16.772305",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": "Failed tasks: task_2, task_3, task_4, task_5, task_6"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:17.250668",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:17.276681",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:17.303093",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:17.330816",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:17.463001",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:17.918151",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:17.944395",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:17.970685",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:17.998468",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:18.129013",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:18.162370",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:18.189153",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:18.642700",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:18.669270",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:18.695832",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:18.723447",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:18.854524",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:19.310949",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:19.337552",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:19.364075",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:19.391467",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:19.522940",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:20.072297",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:20.098529",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:20.124727",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:20.152498",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:20.419910",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:20.446981",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:20.480457",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:20.507217",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:20.534181",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:20.563472",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\nmarker = Path('/var/folde",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:20.593919",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:20.595468",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test",
+        "error": "fail"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:20.596981",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:20.780894",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": "Failed tasks: task_2, task_3, task_4, task_5, task_6"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:20.808699",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": "Failed tasks: task_2, task_3, task_4, task_5, task_6"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:21.291699",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:21.319097",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:21.345834",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:21.373645",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:21.505346",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:21.959732",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:21.986076",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:22.012591",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:22.040360",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:22.171339",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:22.205415",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:22.232916",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:22.693177",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:22.720244",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:22.747003",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:22.774915",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:22.906998",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:23.358498",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:23.385419",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:23.412619",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:23.479078",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:23.616660",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:24.172077",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:24.199371",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:24.226480",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:24.254947",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:24.523960",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:24.551977",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:24.579485",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:24.607229",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:24.634916",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:24.664483",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\nmarker = Path('/var/folde",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:24.695052",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:24.696930",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test",
+        "error": "fail"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:24.698698",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:24.878143",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": "Failed tasks: task_2, task_3, task_4, task_5, task_6"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:24.906572",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": "Failed tasks: task_2, task_3, task_4, task_5, task_6"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:25.384710",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:25.412283",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:25.439706",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:25.468189",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:25.600898",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:26.054367",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:26.081633",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:26.108455",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:26.136663",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:26.277148",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:26.311842",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:26.339835",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:26.792256",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:26.819987",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:26.847525",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:26.876379",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:27.010257",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:27.473271",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:27.501170",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:27.528708",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:27.558089",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:27.692893",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:28.253266",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:28.281271",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:28.308897",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:28.338047",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:28.613341",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:28.641564",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:28.669837",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:28.697757",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:28.725835",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:28.756071",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\nmarker = Path('/var/folde",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:28.787392",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:28.789474",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test",
+        "error": "fail"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:28.791562",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:28.977441",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": "Failed tasks: task_2, task_3, task_4, task_5, task_6"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:29.006179",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": "Failed tasks: task_2, task_3, task_4, task_5, task_6"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:29.487907",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:29.515863",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:29.543599",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:29.573473",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:29.708593",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:30.161403",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:30.190268",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:30.217910",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:30.247686",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:30.380951",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:30.420305",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:30.448963",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:30.903458",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:30.932046",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:30.959961",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:30.989473",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:31.123115",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:31.580427",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:31.608944",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:31.636999",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:31.667527",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:31.800205",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:32.351247",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:32.380307",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:32.408590",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:32.438471",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:32.711113",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:32.746900",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:32.775744",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:32.804586",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:32.833114",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:32.863966",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\nmarker = Path('/var/folde",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:32.895278",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:32.897698",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test",
+        "error": "fail"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:32.900098",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:33.081528",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": "Failed tasks: task_2, task_3, task_4, task_5, task_6"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:33.110867",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": "Failed tasks: task_2, task_3, task_4, task_5, task_6"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:33.589582",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:33.618023",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:33.646641",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:33.676780",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:33.811617",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:34.270234",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:34.298756",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:34.327788",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:34.358448",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:34.493691",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:34.529102",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:34.558051",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:35.011519",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:35.040417",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:35.069961",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:35.100863",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:35.236355",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:35.696025",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:35.724456",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:35.756244",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:35.786578",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:35.921538",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:36.473997",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:36.502833",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:36.531687",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:36.562142",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:36.834871",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:36.870881",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:36.899782",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:36.929119",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:36.958291",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:36.989641",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\nmarker = Path('/var/folde",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:37.021624",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:37.024342",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test",
+        "error": "fail"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:37.027009",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:37.207697",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": "Failed tasks: task_2, task_3, task_4, task_5, task_6"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:37.237601",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": "Failed tasks: task_2, task_3, task_4, task_5, task_6"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:37.723861",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:37.752892",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:37.781640",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:37.812112",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:37.947580",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:38.403432",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:38.432972",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:38.462073",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:38.492544",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:38.628854",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:38.665125",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:38.695096",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:39.149273",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:39.178421",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:39.207413",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:39.237667",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:39.373532",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:39.825748",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:39.854507",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:39.882919",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:39.913985",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:40.050316",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:40.613532",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:40.643531",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:40.673971",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:40.705437",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:40.979183",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:41.009237",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:41.038947",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:41.068626",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:41.098203",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:41.130071",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\nmarker = Path('/var/folde",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:41.162420",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:41.165491",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test",
+        "error": "fail"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:41.168504",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:41.350989",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": "Failed tasks: task_2, task_3, task_4, task_5, task_6"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:41.381553",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": "Failed tasks: task_2, task_3, task_4, task_5, task_6"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:41.864822",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:41.894669",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:41.924164",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:41.955172",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:42.090894",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:42.547619",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:42.577197",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:42.607039",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:42.638477",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:42.773062",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:42.809682",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:42.839821",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:43.299879",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:43.330108",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:43.359733",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:43.390690",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:43.525773",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:43.988915",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:44.018997",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:44.049057",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:44.080172",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:44.216056",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:44.783422",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:44.813545",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:44.843826",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:44.875561",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:45.151522",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:56.930404",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:56.951343",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:56.973595",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:56.993416",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:57.194470",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:57.215628",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:57.236690",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:57.257563",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:57.278450",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:57.301356",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\nmarker = Path('/var/folde",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:57.324677",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:57.328280",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test",
+        "error": "fail"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:57.331911",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:57.479893",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": "Failed tasks: task_2, task_3, task_4, task_5, task_6"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:57.511805",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": "Failed tasks: task_2, task_3, task_4, task_5, task_6"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:58.025161",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:58.046238",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:58.066861",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:58.088382",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:58.225145",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:58.697238",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:58.718601",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:58.739191",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:58.761545",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:58.896009",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:58.923444",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:58.951383",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:59.429525",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:59.450971",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:59.472117",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:59.495430",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:30:59.632840",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:00.110987",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:00.132530",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:00.153322",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:00.175883",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:00.311341",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:00.866714",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:00.896149",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:00.925962",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:00.957654",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:01.232599",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:01.263357",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:01.293546",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:01.323322",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:01.353597",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:01.386057",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\nmarker = Path('/var/folde",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:01.418654",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:01.422423",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test",
+        "error": "fail"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:01.426145",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:01.608933",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": "Failed tasks: task_2, task_3, task_4, task_5, task_6"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:01.644028",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": "Failed tasks: task_2, task_3, task_4, task_5, task_6"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:02.127948",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:02.158080",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:02.188218",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:02.219675",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:02.355608",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:02.855370",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:02.885535",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:02.915381",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:02.946548",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:03.081657",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:03.118878",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:03.149433",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:03.604687",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:03.635415",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:03.666153",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:03.697970",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:03.834556",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:04.287472",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:04.318191",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:04.347977",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:04.379919",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:04.514742",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": ""
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:05.071489",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:05.101586",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:05.132289",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:05.164063",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:05.435593",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:05.466163",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:05.497086",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:05.527945",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:05.558926",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:05.591245",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\nmarker = Path('/var/folde",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:05.624529",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:05.628592",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test",
+        "error": "fail"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:05.632554",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:05.818272",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": "Failed tasks: task_2, task_3, task_4, task_5, task_6"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:05.849981",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\np = Path('/Users/liuzimin",
+        "error": "Failed tasks: task_2, task_3, task_4, task_5, task_6"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:42.281657",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:42.303684",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:42.325157",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:42.348205",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test goal",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:42.543406",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:42.566575",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:42.588086",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:42.613175",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:42.637140",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "__result__ = 1/0",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:42.661703",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "from pathlib import Path\nmarker = Path('/var/folde",
+        "error": "Failed tasks: task_1"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:42.685892",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:42.690291",
+      "metric": "cycle",
+      "value": 0,
+      "tags": {
+        "goal": "test",
+        "error": "fail"
+      }
+    },
+    {
+      "ts": "2026-07-05T16:31:42.694628",
+      "metric": "cycle",
+      "value": 1,
+      "tags": {
+        "goal": "test"
+      }
     }
   ]
 }

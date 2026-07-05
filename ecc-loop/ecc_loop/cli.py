@@ -174,6 +174,25 @@ def cmd_evolve() -> int:
     return 1
 
 
+
+def cmd_proactive() -> int:
+    """L4 Proactive: fully autonomous decision-making workflow."""
+    from ecc_loop.proactive import run_proactive, token_usage
+    print("ECC Proactive — L4 Autonomous Workflow")
+    print("=" * 50)
+    tokens = token_usage()
+    print("Token usage: ~%s tokens in %s runs (%s/run)" % (
+        tokens["total_est"], tokens["runs"], tokens["avg_per_run"]))
+    results = run_proactive(max_cycles=3)
+    print()
+    print("Results:")
+    print("  Cycles: %s" % results["cycles"])
+    print("  Fixed:  %s" % results["fixed"])
+    print("  Failed: %s" % results["failed"])
+    print("  Tokens: ~%s" % results["tokens_est"])
+    print("  Time:   %sms" % results["elapsed_ms"])
+    return 0 if results["failed"] == 0 else 1
+
 def cmd_improve() -> int:
     """ECC self-assessment: uses DISCOVER's gap analysis."""
     from ecc_loop.engine import _discover_gaps, discover_work
@@ -254,6 +273,9 @@ def main() -> int:
 
     if cmd == "fix":
         return cmd_fix()
+
+    if cmd == "proactive":
+        return cmd_proactive()
 
     if cmd == "evolve":
         return cmd_evolve()

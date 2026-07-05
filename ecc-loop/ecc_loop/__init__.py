@@ -1,6 +1,6 @@
 from . import seed, reflection, scanner, models, engine, handlers, cli, llm
 
-__all__ = ["seed", "reflection", "scanner", "models", "engine", "handlers", "cli", "llm", "logger", "goal_freeze", "precise_specs", "worktree", "learning", "safety", "run_log", "continual", "reader", "checkpoint"]
+__all__ = ["seed", "reflection", "scanner", "models", "engine", "handlers", "cli", "llm", "logger", "goal_freeze", "precise_specs", "worktree", "learning", "safety", "run_log", "continual", "reader", "checkpoint", "proactive"]
 from . import logger
 from . import goal_freeze
 from . import precise_specs
@@ -9,3 +9,4 @@ from . import safety
 from . import run_log
 from . import continual
 from . import reader, checkpoint
+from . import proactive
