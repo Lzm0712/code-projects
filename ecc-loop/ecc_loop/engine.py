@@ -13,7 +13,6 @@ Following Karpathy principles:
 Circuit breaker prevents runaway loops (loop-engineering inspired).
 """
 
-import json
 from pathlib import Path
 from typing import Optional
 
@@ -123,6 +122,34 @@ def _discover_gaps(state: dict, context: dict) -> list[str]:
     # Check skill changes suggest action
     if context.get("skill_changes", {}).get("new"):
         gaps.append("New skills detected — review and integrate")
+
+    # ── Code quality checks ──
+    for mod_name in ["engine.py", "seed.py"]:
+        mod = source_dir / mod_name
+        if mod.exists():
+            content = mod.read_text()
+            # Check for actually-unused imports (look for import statements at module top)
+            for line in content.splitlines():
+                stripped = line.strip()
+                if stripped.startswith("import ") and not stripped.startswith("import ecc_loop"):
+                    name = stripped.split()[1].split(".")[0]
+                    # Check if the name is used anywhere else in the file
+                    rest = content.replace(line, "", 1)
+                    if name not in rest:
+                        gaps.append(f"Unused import in {mod_name}: {stripped}")
+
+    # Check __init__.py exports
+    init_py = source_dir / "__init__.py"
+    if init_py.exists():
+        init_content = init_py.read_text()
+        for mod in sorted(source_dir.glob("*.py")):
+            name = mod.stem
+            if name != "__init__" and f'"{name}"' not in init_content and name not in init_content.split('import ')[-1]:
+                gaps.append(f"__init__.py missing export: {name}")
+
+    # Check py.typed marker
+    if not (source_dir / "py.typed").exists():
+        gaps.append("Missing py.typed marker for type checking")
 
     return gaps
 
