@@ -5,7 +5,9 @@ from ecc_loop import engine
 from ecc_loop.models import TaskStatus, VerifyStatus
 
 
-def test_discover_single_goal():
+def test_discover_single_goal(monkeypatch):
+    import ecc_loop.seed as s
+    monkeypatch.setattr(s, "load_seed", lambda p: {"version": "1.0", "skills": {}})
     result = engine.discover("分析我的工作模式")
     assert result.issue == "分析我的工作模式"
     assert len(result.goals) >= 1
@@ -69,10 +71,12 @@ def test_verify_some_fail():
 def test_run_full_flow_pass(tmp_path, monkeypatch):
     """Full run with stub handler that doesn't raise."""
     import ecc_loop.engine as eng
+    import ecc_loop.seed as s
 
     def stub_pass(task):
         return "done"
 
+    monkeypatch.setattr(s, "load_seed", lambda p: {"version": "1.0"})
     monkeypatch.setattr(eng, "_execute_task", stub_pass)
 
     result = engine.run("do the thing")
@@ -82,10 +86,12 @@ def test_run_full_flow_pass(tmp_path, monkeypatch):
 def test_run_full_flow_fail(tmp_path, monkeypatch):
     """Full run with stub handler that raises."""
     import ecc_loop.engine as eng
+    import ecc_loop.seed as s
 
     def stub_fail(task):
         raise RuntimeError("intentional failure")
 
+    monkeypatch.setattr(s, "load_seed", lambda p: {"version": "1.0"})
     monkeypatch.setattr(eng, "_execute_task", stub_fail)
 
     result = engine.run("do the thing")

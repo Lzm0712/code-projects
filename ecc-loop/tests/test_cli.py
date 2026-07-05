@@ -7,10 +7,13 @@ from ecc_loop import cli
 def test_cmd_run_pass(monkeypatch):
     """CLI run returns 0 on PASS."""
     import ecc_loop.engine as eng
+    import ecc_loop.seed as s
 
     def stub_pass(task):
         return "done"
 
+    # Isolate seed state — prevent real runs from contaminating tests
+    monkeypatch.setattr(s, "load_seed", lambda p: {"version": "1.0"})
     monkeypatch.setattr(eng, "_execute_task", stub_pass)
 
     rc = cli.cmd_run("test goal")
@@ -20,10 +23,12 @@ def test_cmd_run_pass(monkeypatch):
 def test_cmd_run_fail(monkeypatch):
     """CLI run returns 1 on FAIL."""
     import ecc_loop.engine as eng
+    import ecc_loop.seed as s
 
     def stub_fail(task):
         raise RuntimeError("test failure")
 
+    monkeypatch.setattr(s, "load_seed", lambda p: {"version": "1.0"})
     monkeypatch.setattr(eng, "_execute_task", stub_fail)
 
     rc = cli.cmd_run("test goal")

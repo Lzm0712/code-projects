@@ -17,6 +17,7 @@ from typing import Optional
 from ecc_loop.models import (
     DiscoveryResult, Plan, ExecutionResult, VerifyResult,
     Task, TaskStatus, VerifyStatus,
+    CircuitBreakerConfig, CircuitBreakerState,
 )
 from ecc_loop import seed, scanner, reflection
 
@@ -207,16 +208,79 @@ def iterate(
 
 # ── Main Dispatcher ──────────────────────────────────────────────────
 
-def run(goal: str) -> VerifyResult:
+def check_circuit_breaker(
+    state: dict,
+    last_error: str,
+    config: Optional[CircuitBreakerConfig] = None,
+) -> CircuitBreakerState:
+    """
+    Check if the circuit breaker should trip.
+
+    Called at start of each run(). Returns tripped=True with reason if
+    any threshold is exceeded.
+    """
+    cfg = config or CircuitBreakerConfig()
+    cb = CircuitBreakerState(
+        consecutive_failures=state.get("consecutive_failures", 0),
+        last_error=state.get("last_error", ""),
+        total_attempts=state.get("total_attempts", 0),
+    )
+
+    # Check total iterations
+    if cb.total_attempts > cfg.max_iterations:
+        cb.tripped = True
+        cb.trip_reason = f"Max iterations ({cfg.max_iterations}) exceeded"
+        return cb
+
+    # Check consecutive failures (same error in a row)
+    if last_error and last_error == cb.last_error:
+        cb.consecutive_failures += 1
+        cb.last_error = last_error
+    else:
+        cb.consecutive_failures = 1 if last_error else 0
+        cb.last_error = last_error
+
+    if cb.consecutive_failures >= cfg.max_consecutive_failures:
+        cb.tripped = True
+        cb.trip_reason = (
+            f"Same error {cb.consecutive_failures} times: {last_error[:100]}"
+        )
+        return cb
+
+    return cb
+
+
+def run(goal: str, config: Optional[CircuitBreakerConfig] = None) -> VerifyResult:
     """
     Full five-stage run:
         DISCOVER → PLAN → EXECUTE → VERIFY → [ITERATE]
 
     Returns VerifyResult. On FAIL, caller can re-run with same goal
     to trigger the iteration loop.
+
+    Circuit breaker: trips if max_iterations or consecutive failures
+    are exceeded. Pass config to customize thresholds.
     """
+    cfg = config or CircuitBreakerConfig()
     seed_path = "~/.hermes/ecc-loop-seed.json"
     state = seed.load_seed(seed_path)
+
+    # ── Circuit breaker check ──
+    state["total_attempts"] = state.get("total_attempts", 0) + 1
+    last_error = state.get("last_error", "")
+    cb = check_circuit_breaker(state, last_error, cfg)
+    # Persist circuit breaker state to seed
+    state["consecutive_failures"] = cb.consecutive_failures
+    state["last_error"] = cb.last_error
+    if cb.tripped:
+        return VerifyResult(
+            status=VerifyStatus.FAIL,
+            passed_tasks=[],
+            failed_tasks=[],
+            summary=f"CIRCUIT BREAKER TRIPPED — {cb.trip_reason}",
+            feedback=cb.trip_reason,
+        )
+
     state["current_goal"] = goal
     seed.save_seed(state, seed_path)
 
@@ -231,6 +295,13 @@ def run(goal: str) -> VerifyResult:
 
     # Stage 4: VERIFY
     verify_result = verify(plan_result, execution)
+
+    # Update circuit breaker state in seed
+    if verify_result.status == VerifyStatus.FAIL:
+        state["last_error"] = verify_result.feedback
+    else:
+        state["last_error"] = ""
+        state["consecutive_failures"] = 0
 
     # Stage 5: ITERATE (update seed based on result)
     iterate(verify_result, state, seed_path)

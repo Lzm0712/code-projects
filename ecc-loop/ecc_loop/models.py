@@ -110,3 +110,27 @@ class ECCState:
     plan: Optional[Plan] = None
     execution: Optional[ExecutionResult] = None
     verify: Optional[VerifyResult] = None
+
+
+# ── Circuit Breaker ───────────────────────────────────────────────────
+
+@dataclass
+class CircuitBreakerConfig:
+    """
+    Prevents runaway loops. Trips when any threshold is exceeded.
+
+    Inspired by loop-engineering/loop-context.
+    """
+    max_iterations: int = 5        # Max total attempts per goal
+    max_consecutive_failures: int = 3  # Same error N times in a row → trip
+    stagnant_attempts: int = 3        # No progress after N attempts → trip
+
+
+@dataclass
+class CircuitBreakerState:
+    """Live circuit breaker state tracked across iterations."""
+    consecutive_failures: int = 0
+    last_error: str = ""
+    total_attempts: int = 0
+    tripped: bool = False
+    trip_reason: str = ""
